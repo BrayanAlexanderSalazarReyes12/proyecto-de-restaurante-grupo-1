@@ -1,1 +1,9 @@
 /*Mapa del sitio*/
+
+h3.head2 {
+	text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding-top: 200px;
+	margin-bottom: 40px;
+    color: black;
+}

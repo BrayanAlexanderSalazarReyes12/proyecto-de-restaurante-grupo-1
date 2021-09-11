@@ -1,0 +1,60 @@
+:root{
+    --color-1: #467302;
+    --color-2: #83A603;
+    --color-3: #F29F05;
+    --color-4: #D95204;
+    --color-5: #A61103;
+    --fuente : 'Roboto', sans-serif;
+    --weight-titulos   : 500;
+    --weight-subtitulos: 400;
+    --weight-parrafos  : 100;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+header nav{
+    background: var(--color-5);
+}
+header nav .navbar-brand{
+    font-family: var(--fuente);
+    font-weight: var(--weight-subtitulos);
+    color: white;
+}
+header nav ul li a{
+    font-family: var(--fuente);
+    font-weight: var(--weight-parrafos);
+    color: white !important;
+    border-radius: 10px;
+    padding-left: 10px !important;
+}
+header nav ul li a:hover{
+    background: white;
+    color: var(--color-5) !important;
+    border-radius: 10px;
+}
+
+header nav form input:focus{
+    border-color: white !important;
+    box-shadow: 0 0 0 0.25rem rgb(245 242 242 / 42%) !important;
+}
+
+/***************MENU******************/
+
+div.content{
+    background: var(--color-4);
+    font-weight: var(--weight-titulos);
+}
+
+h3.head2{
+    background: var(--color-4);
+    font-family: var(--fuente);
+    
+}
+
+div.partes_menu{
+    font-family: var(--fuente);
+    font-weight: var(--weight-subtitulos);
+}

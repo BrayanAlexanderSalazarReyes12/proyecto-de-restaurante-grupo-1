@@ -1,1 +1,64 @@
 /*Mapa del sitio*/
+
+
+
+
+h3.head3 {
+	text-align: center;
+    font-family: 'Roboto', sans-serif;
+	padding-top: 130px;
+    color: #D95204;
+    font-size: 40px;
+    text-decoration: overline;
+}
+
+
+div.lista_mapa{
+    font-family: 'Roboto', sans-serif;
+    background-color: #A61103;
+    padding-top: 5%;
+    padding-left: 12%;
+    padding-bottom: 40px;
+    text-align: center;
+    color: white;
+}
+
+div.lista_mapa a{
+    color: white;
+    text-decoration: none;
+}
+
+div.lista_mapa a:hover{
+    color: rgb(22, 27, 20);
+}
+
+
+
+/*PIE DE PAGINA*/
+footer {
+	background-color:#A61103;
+	height: 50%;
+    color: white;
+    padding: 15px;
+    padding-left: 15%;
+}
+
+.main1 { 
+  display:flex;
+  margin:0 auto;
+}
+
+
+div.redes-footer{
+    font-size: 30px;
+    padding-left: 5%;
+}
+div.redes-footer a:hover{
+    color: blanchedalmond;
+}
+
+h6.text-footer{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(136, 178, 197);
+}
+

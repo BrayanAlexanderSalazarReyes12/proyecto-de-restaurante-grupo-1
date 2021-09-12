@@ -10,6 +10,7 @@ var menu_muestra_1=document.getElementById('menu_muestra_1');
 var menu_muestra_2=document.getElementById('menu_muestra_2');
 var menu_muestra_3=document.getElementById('menu_muestra_3');
 var menu_muestra_4=document.getElementById('menu_muestra_4');
+var menu_muestra_5=document.getElementById('menu_muestra_5');
 /*DATOS ENSALADAS*/
 var tit_en=['Ensalada poke de atún y algas con aguacate','Panzanella italiana','Ensalada caprese de pasta','Ensalada niçoise',
 'Ensalada Biof rumana','Ensalada griega','Ensalada alemana de patata o kartoffelsalat','Namasu de zanahoria y nabo'
@@ -50,17 +51,28 @@ var des_bre_bed=['Empezamos hidratando las chufas el día antes. Las ponemos en 
 var pre_bed=['$20.000','$15.000','$20.000','$5.000',
 '$10.000','$12.000','$5.000','$30.000',
 '$35.000','$50.000','$25.000','$80.000'];
+/*DATOS DE POSTRES*/
+var tit_pos=['Cheesecake congelado','Crepas de fresa y nutella','Semifrío de frambuesa','Vasitos de pera y tres chocolates',
+'Melocotones flameados','Gelatina de mosaico','Tarta fría de chocolate','Cupcakes de Chocolate',
+'Scones integrales con pasas','Flan de queso','Gomitas de sabores','Muffins de frutos rojos'];
+var des_bre_pos=['Este postre es muy atractivo preferido por los clientes','Las crepas de nutella y fresa son una opción fácil y rápida que puedes incorporar a tu menú de postres. Cómo hacer este postre es muy sencillo, debe ser preparado en el momento para servir caliente','Este postre es similar a la tarta de queso, es otro platillo del que podrás obtener ocho porciones, su preparación es muy fácil y solo necesitas refrigerar.','Los vasitos de pera y tres chocolates son un postre sencillo de preparar, ya que le  dedicarás poco tiempo. La siguiente receta es para cuatro porciones',
+'Este postre es perfecto para acompañar las crepas en tu negocio. También lo puedes vender en forma de dulce empacado en copitas de plástico o en un envase que se pueda calentar, recomienda a tu cliente que lo consuma caliente, ya que así conservará sus sabores.','La gelatina es una opción segura para la venta, puedes acompañar este postre con leche condensada y servirlos en vasos.','La tarta fría es uno de los favoritos para obtener ingresos adicionales a través de los postres.','En esta receta de Cupcakes de Chocolate tardas en la elaboración alrededor de 1 hora y 40 minutos para seis porciones, con una dificultad para realizarlo de baja-media. ',
+'Los Scones son panecillos muy reconocidos en Estados Unidos, Australia, Reino Unido, Escocia, entre otros países. ','El flan de queso es uno de los favoritos de las personas, es una opción económica para brindar un postre diferente y delicioso a tus clientes.','Las gomitas son las favoritas de muchas personas. En realidad, es uno de los postres más fáciles de hacer y vender dada su versatilidad.','Los muffins son la elección favorita de muchos, ya que tienen las cantidades ideales de dulce.'];
+var pre_pos=['$20.000','$15.000','$20.000','$5.000',
+'$10.000','$12.000','$5.000','$30.000',
+'$35.000','$50.000','$25.000','$80.000'];
 menu_1.onclick = function(){
     menu_1.innerHTML ="<a href='#ensaladas' class='nav-link active'>ensaladas</a>";
     menu_2.innerHTML ="<a href='#sopas' class='nav-link'>Sopas</a>";
     menu_3.innerHTML ="<a href='#aperitivos' class='nav-link'>Aperitivos</a>";
     menu_4.innerHTML ="<a href='#bebida' class='nav-link'>Bebida</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
+    menu_5.innerHTML ="<a href='#postres' class='nav-link'>Postres</a>";
     menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
     //vaciador menus
     menu_muestra_2.innerHTML="";
     menu_muestra_3.innerHTML="";
     menu_muestra_4.innerHTML="";
+    menu_muestra_5.innerHTML="";
     //menu_1 llamado
     menu_muestra_1.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
     "<div class='col'>"+
@@ -215,12 +227,13 @@ menu_2.onclick = function(){
     menu_2.innerHTML ="<a href='#sopas' class='nav-link active'>Sopas</a>";
     menu_3.innerHTML ="<a href='#aperitivos' class='nav-link'>Aperitivos</a>";
     menu_4.innerHTML ="<a href='#bebida' class='nav-link'>Bebida</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
+    menu_5.innerHTML ="<a href='#postres' class='nav-link'>Postres</a>";
     menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
     //vaciador menus
     menu_muestra_1.innerHTML="";
     menu_muestra_3.innerHTML="";
     menu_muestra_4.innerHTML="";
+    menu_muestra_5.innerHTML="";
     //menu_2 llamado
     menu_muestra_2.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
     "<div class='col'>"+
@@ -375,12 +388,13 @@ menu_3.onclick = function(){
     menu_2.innerHTML ="<a href='#sopas' class='nav-link'>Sopas</a>";
     menu_3.innerHTML ="<a href='#aperitivos' class='nav-link active'>Aperitivos</a>";
     menu_4.innerHTML ="<a href='#bebida' class='nav-link'>Bebida</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
+    menu_5.innerHTML ="<a href='#Postres' class='nav-link'>Postres</a>";
     menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
     //vaciador menus
     menu_muestra_1.innerHTML="";
     menu_muestra_2.innerHTML="";
     menu_muestra_4.innerHTML="";
+    menu_muestra_5.innerHTML="";
     //menu_3 llamado
      menu_muestra_3.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
      "<div class='col'>"+
@@ -535,12 +549,13 @@ menu_4.onclick = function(){
     menu_2.innerHTML ="<a href='#sopas' class='nav-link'>Sopas</a>";
     menu_3.innerHTML ="<a href='#aperitivos' class='nav-link'>Aperitivos</a>";
     menu_4.innerHTML ="<a href='#bebida' class='nav-link active'>Bebida</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
+    menu_5.innerHTML ="<a href='#postres' class='nav-link'>Postres</a>";
     menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
     //vaciador menus
     menu_muestra_1.innerHTML="";
     menu_muestra_2.innerHTML="";
     menu_muestra_3.innerHTML="";
+    menu_muestra_5.innerHTML="";
     //menu_4 llamado
     menu_muestra_4.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
     "<div class='col'>"+
@@ -691,12 +706,164 @@ menu_4.onclick = function(){
 }
 
 menu_5.onclick = function(){
-    menu_1.innerHTML ="<a href='#prueba1' class='nav-link'>prueba1</a>";
-    menu_2.innerHTML ="<a href='#prueba2' class='nav-link'>prueba2</a>";
-    menu_3.innerHTML ="<a href='#prueba3' class='nav-link'>prueba3</a>";
-    menu_4.innerHTML ="<a href='#prueba4' class='nav-link'>prueba4</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link  active'>prueba5</a>";
+    menu_1.innerHTML ="<a href='#ensaladas' class='nav-link'>Ensaladas</a>";
+    menu_2.innerHTML ="<a href='#sopas' class='nav-link'>Sopas</a>";
+    menu_3.innerHTML ="<a href='#aperitivos' class='nav-link'>Aperitivos</a>";
+    menu_4.innerHTML ="<a href='#bebida' class='nav-link'>Bebida</a>";
+    menu_5.innerHTML ="<a href='#postres' class='nav-link  active'>Postres</a>";
     menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
+    //vaciador menus
+    menu_muestra_1.innerHTML="";
+    menu_muestra_2.innerHTML="";
+    menu_muestra_3.innerHTML="";
+    menu_muestra_4.innerHTML="";
+    //menu_5 llamado
+    menu_muestra_5.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_01.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[0]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[0]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[0]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_02.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[1]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[1]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[1]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_03.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[2]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[2]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[2]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_04.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[3]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[3]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[3]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_05.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[4]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[4]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[4]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_06.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[5]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[5]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[5]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_07.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[6]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[6]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[6]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_08.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[7]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[7]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[7]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_09.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[8]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[8]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[8]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_10.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[9]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[9]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[9]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_11.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[10]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[10]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[10]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_12.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[11]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[11]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[11]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+"</div>";
 }
 
 menu_6.onclick = function(){

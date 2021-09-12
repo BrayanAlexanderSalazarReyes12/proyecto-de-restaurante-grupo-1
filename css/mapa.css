@@ -16,22 +16,25 @@ h3.head3 {
 div.lista_mapa{
     font-family: 'Roboto', sans-serif;
     background-color: #A61103;
+    color: white;
     padding-top: 5%;
-    padding-left: 12%;
+    padding-left: 22%;
     padding-bottom: 40px;
     text-align: center;
-    color: white;
+    padding-right: 12%;
 }
 
 div.lista_mapa a{
     color: white;
     text-decoration: none;
 }
-
 div.lista_mapa a:hover{
     color: rgb(22, 27, 20);
 }
 
+div.lista_mapa h5{
+    text-decoration: overline;
+}
 
 
 /*PIE DE PAGINA*/

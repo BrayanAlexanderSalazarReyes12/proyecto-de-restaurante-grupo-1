@@ -59,7 +59,7 @@
                             <a class="nav-link" href="#">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#menu">Menú</a>
+                            <a class="nav-link" href="#">Menú</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Servicios</a>
@@ -67,10 +67,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#contactos">Contactanos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#mapa">Mapa</a>
-                        </li>
-
+                        
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -104,46 +101,12 @@
 
     <!-- -----------------------------CONTENT--------------------------------- -->
 
-    <!-- INICIO MENU -->
-    <div class="content" id="menu">
-        <div class="container_12">
-            <div class="grid_12">
-                <h3 class="head2">NUESTRO MENU</h3>
-            </div>
-        </div>
-    
-        <div class="partes_menu">
-            <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item" id="menu_1"><a href="#ensaladas" class="nav-link">Ensaladas</a></li>
-                <li class="nav-item" id="menu_2"><a href="#sopas" class="nav-link">Sopas</a></li>
-                <li class="nav-item" id="menu_3"><a href="#aperitivos" class="nav-link">Aperitivos</a></li>
-                <li class="nav-item" id="menu_4"><a href="#bebida" class="nav-link">Bebida</a></li>
-                <li class="nav-item" id="menu_5"><a href="#prueba5" class="nav-link">prueba5</a></li>
-                <li class="nav-item" id="menu_6"><a href="#prueba6" class="nav-link">prueba6</a></li>
-            </ul>
-        </div>
-
-        <div class="menu_muestra_1" id="menu_muestra_1">
-            
-        </div>
-
-        <div class="menu_muestra_2" id="menu_muestra_2">
-            
-        </div>
-
-        <div class="menu_muestra_3" id="menu_muestra_3">
-            
-        </div>
-
-        <div class="menu_muestra_4" id="menu_muestra_4">
-            
-        </div>
-    </div>
     
 
     <!-- FIN MENU -->
     <!-- ------------------------------FIN DEL CONTENT-------------------------------- -->
-<br><br><br>
+
+
     <!-- SECTION DE CONTACTACTENOS -->
     <section id="contactos" class="contactanos row m-0">
         <div class="texto col-12 col-md-6 d-flex justify-content-center align-items-center">
@@ -162,6 +125,21 @@
                         <div class="col-sm-1-12">
                             <input type="text" class="form-control" name="inputName" id="inputName"
                                 placeholder="Nombre">
+
+                <form id="contactanos">
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                        <div class="col-sm-1-12">
+                            <input type="text" minlength="4" maxlength="9" class="form-control" name="nombre" id="nombres"
+                                placeholder="Nombre" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                        <div class="col-sm-1-12">
+                            <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="correo" id="correo"
+                                placeholder="Correo" required>
                         </div>
                     </div>
 
@@ -170,6 +148,9 @@
                         <div class="col-sm-1-12">
                             <input type="text" class="form-control" name="inputName" id="inputName"
                                 placeholder="Correo">
+
+                            <input type="text" class="form-control" minlength="10" maxlength="11" name="telefono" id="telefono"
+                                placeholder="Telefono" required>
                         </div>
                     </div>
 
@@ -180,6 +161,12 @@
 
                     <div class="form-check pb-3">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                        <textarea class="form-control" name="textarea" id="textarea" rows="3">Mensaje</textarea>
+                    </div>
+
+                    <div class="form-check pb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="terminos" required>
                         <label class="form-check-label text-white" for="flexCheckDefault">
                             Acepto Terminos y condiciones
                         </label>
@@ -197,87 +184,9 @@
     <!-- FIN DE CONTACTENOS -->
 
 
-<!--*************************************SECTION MAPA*******************************************-->
 
-    <section id="mapa" >
-        
-            <div class="container_1" >
-                <div class="grid_1">
-                    <h3 class="head3">MAPA DEL SITIO</h3>
-                </div>
-            </div>
-        
-        <div class="lista_mapa border border-danger">
-            <div class="row">  
-                <div class="col-md-2">
-                    <br>
-                        <a href="#"><h5>GENERAL</h5></a>
-                        <a href="#">Inicio</a>
-                </div>
-                <div class="col-md-2">
-                    <br>
-                    <a href="#"><h5>NOSOTROS</h5></a>
-                    <a href="#historia">Nuestra Historia</a>
-                </div>
-                <div class="col-md-2">
-                    <br>
-                    <a href="#menu"><h5>MENÚ</h5></a>
-                </div>
-                <div class="col-md-2">
-                    <br>
-                    <a href="#servicios"><h5>SERVICIOS</h5></a>
-                    <a href="#cumpleaños">Cumpleaños</a>
-                    <br>
-                    <a href="#aniversario">Aniversarios</a>
-                </div>
-                <div class="col-md-2">
-                    <br>
-                    <a href="#contactos"><h5>CONTACTO</h5></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!--*****Footer******-->
-
-    <footer>
-        <div class="container">
-        <div class="row">
-                <div class="col-xs-12 col-md-4">
-                <h6 class="text-footer">CONTACTO:</h6>
-                    <h6 class="text-muted">
-                        Direccion<br>
-                        XXXXXXXXXXXXX<br>
-                        Teléfonos: XXXXXXXXX – XXXXXXXXX.<br>
-                    </h6>
-                </div>
-            <div class="col-xs-12 col-md-4">
-                <div class="pull-right">
-                    <h6 class="text-footer">ENCUENTRANOS EN LAS REDES</h6>
-                    <div class="redes-footer">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="row"> <p class="text-muted small text-right">XXXXXXXXXXXXXXXXX.<br> Todos los derechos reservados.</p></div>
-            </div>
-
-            <div class="col-xs-12 col-md-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62775.31309552444!2d-73.29326913509752!3d10.464588493467485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab9b5d6cf71d7%3A0x84a43625b14c234a!2sValledupar%2C%20Cesar!5e0!3m2!1ses!2sco!4v1631416151348!5m2!1ses!2sco" width="150" height="120" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>  
-        </div>
-    </footer>
-
-<!--FINAL MAPA-->
-
-
-
-
-
-
+    <!--JS CONTACTANOS-->
+    <script src="js/contactanos.js"></script>
 
 
     <!-- Bootstrap JavaScript Libraries -->
@@ -288,8 +197,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
 
-    <!--JS MENU-->
-    <script src="http://127.0.0.1:5500/proyecto-de-restaurante-grupo-1/js/menu.js" crossorigin="brayan alexander salazar reyes"></script>
+
 </body>
 
 </html>

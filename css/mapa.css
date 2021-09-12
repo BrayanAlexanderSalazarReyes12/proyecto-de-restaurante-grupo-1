@@ -16,16 +16,18 @@ h3.head3 {
 div.lista_mapa{
     font-family: 'Roboto', sans-serif;
     background-color: #A61103;
+    color: white;
     padding-top: 5%;
-    padding-left: 12%;
+    padding-left: 20%;
     padding-bottom: 40px;
     text-align: center;
-    color: white;
+    padding-right: 10%;
 }
 
 div.lista_mapa a{
     color: white;
     text-decoration: none;
+    
 }
 
 div.lista_mapa a:hover{

@@ -29,7 +29,12 @@ header nav ul li a{
     font-weight: var(--weight-parrafos);
     color: white !important;
     border-radius: 10px;
-    padding-left: 10px !important;
+    height: 100%;
+    width: 100%;
+    padding: .5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 header nav ul li a:hover{
     background: white;

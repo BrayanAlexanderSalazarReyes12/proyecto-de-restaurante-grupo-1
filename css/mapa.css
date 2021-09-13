@@ -17,7 +17,7 @@ div.lista_mapa{
     font-family: 'Roboto', sans-serif;
     background-color: #A61103;
     color: white;
-    padding-top: 4%;
+    padding-top: 3%;
     padding-bottom: 3%;
     text-align: center;
     padding-left: 7%;
@@ -47,7 +47,7 @@ div.lista_mapa h3{
 /*PIE DE PAGINA*/
 footer {
     text-align: center;
-	background-color:#A61103;
+	background:linear-gradient(to bottom, #A61103, rgb(20, 5, 5));
 	height: 50%;
     color: white;
     padding-top: 20px;

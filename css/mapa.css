@@ -21,6 +21,7 @@ div.lista_mapa{
     padding-bottom: 3%;
     text-align: center;
     padding-left: 7%;
+    margin-right: 0;
 }
 
 div.lista_mapa a{
@@ -39,9 +40,25 @@ div.lista_mapa h5{
 div.lista_mapa h3{
     padding-top: 1%;
     color:slategrey;
-    text-align: center;
+    text-align: left;
     text-decoration: underline;
+}
 
+.mapa_google{
+    overflow:hidden;
+    padding-bottom:400px;
+    position:relative;
+    height:0;
+}
+
+.mapa_google iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:84%;
+    position:absolute;
+    padding-left: 10%;
+    padding-bottom: 2%;
 }
 
 /*PIE DE PAGINA*/

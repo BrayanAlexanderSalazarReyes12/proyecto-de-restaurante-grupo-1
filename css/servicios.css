@@ -1,0 +1,33 @@
+
+.servicios .texto h1{
+    color: var(--color-5);
+    font-family: var(--fuente);
+    font-weight: var(--weight-titulos);
+    position: relative;
+    z-index: 1;
+}
+.servicios .texto h1::before{
+    content:"";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: -3px;
+    background: var(--color-3);
+    z-index: -1;
+}
+.servicios .texto p{
+    font-family: var(--fuente);
+    font-weight: var(--weight-parrafos);
+}
+div.servicios_card{
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-3);
+}
+
+div.servicios_card{
+    background: var(--color-3);   
+}

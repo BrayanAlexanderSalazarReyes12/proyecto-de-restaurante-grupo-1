@@ -9,6 +9,7 @@
 var menu_1=document.getElementById('menu_1'),menu_2=document.getElementById('menu_2'),menu_3=document.getElementById('menu_3');
 var menu_4=document.getElementById('menu_4'),menu_5=document.getElementById('menu_5'),menu_6=document.getElementById('menu_6');
 var menu_muestra_1=document.getElementById('menu_muestra_1');
+<<<<<<< HEAD
 var menu_muestra_2=document.getElementById('menu_muestra_2');
 var menu_muestra_3=document.getElementById('menu_muestra_3');
 var menu_muestra_4=document.getElementById('menu_muestra_4');
@@ -65,16 +66,39 @@ menu_1.onclick = function(){
     menu_muestra_3.innerHTML="";
     menu_muestra_4.innerHTML="";
     menu_muestra_5.innerHTML="";
+=======
+/*titulos ensaladas*/
+var tit_en=['Ensalada poke de atún y algas con aguacate','Panzanella italiana','Ensalada caprese de pasta','Ensalada niçoise',
+'Ensalada Biof rumana','Ensalada griega','Ensalada alemana de patata o kartoffelsalat','Namasu de zanahoria y nabo'
+,'Coleslaw o ensalada de col','Ensalada de patata a la francesa','Laab gai tailandés','Tabulé libanés'];
+
+function mostrar_ensaldas(){
+    document.write("hola mundo");
+}
+
+menu_1.onclick = function(){
+    menu_1.innerHTML ="<a href='#ensaladas' class='nav-link active'>ensaladas</a>";
+    menu_2.innerHTML ="<a href='#prueba2' class='nav-link'>prueba2</a>";
+    menu_3.innerHTML ="<a href='#prueba3' class='nav-link'>prueba3</a>";
+    menu_4.innerHTML ="<a href='#prueba4' class='nav-link'>prueba4</a>";
+    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
+    menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
+>>>>>>> adrian-david
     //menu_1 llamado
     menu_muestra_1.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
     "<div class='col'>"+
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_1.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[0].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[0].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[0].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button' id='Ensalada_1' data-bs-toggle='modal' data-bs-target='#exampleModal'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[0]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -83,10 +107,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_2.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[1].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[1].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[1].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_1'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[1]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -95,10 +124,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_3.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[2].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[2].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[2].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[2]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -107,10 +141,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_4.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[3].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[3].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[3].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[3]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -119,10 +158,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_5.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[4].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[4].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[4].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[4]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -131,10 +175,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_6.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[5].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[5].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[5].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[5]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -143,10 +192,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_7.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[6].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[6].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[6].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[6]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -155,10 +209,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_8.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[7].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[7].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[7].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[7]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -167,10 +226,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_9.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[8].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[8].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[8].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[8]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -179,10 +243,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_10.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[9].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[9].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[9].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[9]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -191,10 +260,15 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_11.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[10].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[10].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[10].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[10]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -203,15 +277,24 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_12.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
+<<<<<<< HEAD
                     "<h5 class='card-title'>"+json.ensaladas[11].titulo+"</h5>"+
                     "<p class='card-text'>"+json.ensaladas[11].descripcion+"</p>"+
                     "<p class='card-text'>"+json.ensaladas[11].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+=======
+                    "<h5 class='card-title'>"+tit_en[11]+"</h5>"+
+                    "<p class='card-text'>.......</p>"+
+>>>>>>> adrian-david
                 "</div>"+
             "</img>"+
         "</div>"+
     "</div>"+
+<<<<<<< HEAD
 "</div>";
+=======
+"</div>"
+>>>>>>> adrian-david
 }
 
 menu_2.onclick = function(){

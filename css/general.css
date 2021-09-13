@@ -51,10 +51,15 @@ div.content{
 h3.head2{
     background: var(--color-4);
     font-family: var(--fuente);
-    
 }
 
 div.partes_menu{
+    font-family: var(--fuente);
+    font-weight: var(--weight-subtitulos);
+}
+
+a.nav-link{
+    color: black !important;
     font-family: var(--fuente);
     font-weight: var(--weight-subtitulos);
 }

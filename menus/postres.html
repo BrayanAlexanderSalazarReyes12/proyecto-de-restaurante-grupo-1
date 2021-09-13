@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Restaurante</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Estilos Propios -->
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/redes.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/nosotros.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/servicios.css">
+    <link rel="stylesheet" href="../css/contactanos.css">
+    <link rel="stylesheet" href="../css/mapa.css">
+
+    <!-- ANIMATE -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body class="position-relative">
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Restaurante</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class=" text-white fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 animate__animated animate__fadeIn">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactos">Contactanos</a>
+                        </li>
+                        
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- FIN DE HEADER -->
+
+
+
+
+
+    <!-- CONTENEDOR DE REDES SOCIALES -->
+    <div class="redes position-fixed animate__animated animate__slideInDown">
+        <ul>
+            <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+        </ul>
+    </div>
+    <!-- FIN DE REDES SOCIALES -->
+
+    <!-- -----------------------------CONTENT--------------------------------- -->
+
+    <!-- INICIO MENU -->
+    <div class="content">
+        <div class="container_12">
+            <div class="grid_12">
+                <h3 class="head2">NUESTRO MENU</h3>
+            </div>
+        </div>
+    
+        <div class="partes_menu">
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item" id="menu_1"><a href="./ensaladas.html" class="nav-link">Ensaladas</a></li>
+                <li class="nav-item" id="menu_2"><a href="./sopas.html" class="nav-link">Sopas</a></li>
+                <li class="nav-item" id="menu_3"><a href="./aperitivos.html" class="nav-link">Aperitivos</a></li>
+                <li class="nav-item" id="menu_4"><a href="./bebida.html" class="nav-link">Bebida</a></li>
+                <li class="nav-item" id="menu_5"><a href="./postres.html" class="nav-link active">Postres</a></li>
+            </ul>
+        </div>
+        <!--CREACION DE PARTES DE MENU-->
+        
+        <div class="menu_muestra_1" id="menu_muestra_1">
+            <div class='row row-cols-1 row-cols-md-3 g-4'>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_01.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Ensalada poke de atún y algas con aguacate</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$20.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_1' data-bs-toggle='modal' data-bs-target='#exampleModal'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_02.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Panzanella italiana</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$10.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_1'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_03.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Ensalada caprese de pasta</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$25.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_3' data-bs-toggle='modal' data-bs-target='#exampleModal_2'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_04.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Ensalada niçoise</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$45.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_4' data-bs-toggle='modal' data-bs-target='#exampleModal_3'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_05.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Ensalada Biof rumana</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$55.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_4'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_06.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Ensalada griega</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$50.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_5'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_07.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Ensalada alemana de patata o kartoffelsalat</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$60.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_6'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_08.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Namasu de zanahoria y nabo</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$20.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_7'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_09.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Coleslaw o ensalada de col</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$80.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_8'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_10.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Ensalada de patata a la francesa</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$70.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_9'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_11.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Laab gai tailandés</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$70.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_10'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='card h-100'>
+                        <img src='../img/postres/pos_12.webp' alt='...' class='card-img-top '>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Tabulé libanés</h5>
+                                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.</p>
+                                <p class='card-text'>$90.000</p>
+                                <a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_11'>Mas informacion</a>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--VENTANAS MODALES DE LOS ICONOS DE MENU-->
+       
+        <div class='modal' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_01.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                  <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_1' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_02.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_2' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_03.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_3' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_04.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_4' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_05.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_5' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_06.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_6' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_07.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_7' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_08.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_8' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_09.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_9' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_10.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_10' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_11.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='modal' id='exampleModal_11' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h5 class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img src='../img/postres/pos_12.webp' alt='...' class='card-img-top '>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary'>Pedidos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+
+    <!-- FIN MENU -->
+    <!-- ------------------------------FIN DEL CONTENT-------------------------------- -->
+<br><br><br>
+    <!-- SECTION DE CONTACTACTENOS -->
+    <section id="contactos" class="contactanos row m-0">
+        <div class="texto col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <div>
+                <h1 class="text-center">Contáctanos</h1>
+                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam doloribus ipsa
+                    at, labore quaerat expedita sed veniam dolores, culpa autem eum doloremque iure possimus enim et
+                    cumque laboriosam ea aliquid.</p>
+            </div>
+        </div>
+        <div class="formulario col-12 col-md-6">
+            <div class="container">
+                <form>
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control" name="inputName" id="inputName"
+                                placeholder="Nombre">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control" name="inputName" id="inputName"
+                                placeholder="Correo">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label"></label>
+                        <textarea class="form-control" name="" id="" rows="3">Mensaje</textarea>
+                    </div>
+
+                    <div class="form-check pb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label text-white" for="flexCheckDefault">
+                            Acepto Terminos y condiciones
+                        </label>
+                    </div>
+
+                    <div class="mb-3 row w-100">
+                        <div class="col-sm-10 text-center w-100">
+                            <button type="submit" class="btn">Action</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- FIN DE CONTACTENOS -->
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

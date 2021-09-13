@@ -1,8 +1,10 @@
 /**
  * @name		jQuery menu
  * @author		Brayan alexander salazar reyes
- * @version 	1.0
+ * @version 	2.0
  */
+ import {json} from  "./guardar_info.js";
+
 
 var menu_1=document.getElementById('menu_1'),menu_2=document.getElementById('menu_2'),menu_3=document.getElementById('menu_3');
 var menu_4=document.getElementById('menu_4'),menu_5=document.getElementById('menu_5'),menu_6=document.getElementById('menu_6');
@@ -10,16 +12,8 @@ var menu_muestra_1=document.getElementById('menu_muestra_1');
 var menu_muestra_2=document.getElementById('menu_muestra_2');
 var menu_muestra_3=document.getElementById('menu_muestra_3');
 var menu_muestra_4=document.getElementById('menu_muestra_4');
-/*DATOS ENSALADAS*/
-var tit_en=['Ensalada poke de atún y algas con aguacate','Panzanella italiana','Ensalada caprese de pasta','Ensalada niçoise',
-'Ensalada Biof rumana','Ensalada griega','Ensalada alemana de patata o kartoffelsalat','Namasu de zanahoria y nabo'
-,'Coleslaw o ensalada de col','Ensalada de patata a la francesa','Laab gai tailandés','Tabulé libanés'];
-var des_bre_en=['La gran contribución hawaiana (quién estuviera ahora en Hawai) es el famoso poke, popularizado en los últimos años como ejemplo de comida rápida pero sana.','Perfecta para usar trozos de pan que tengáis por casa y para sacar todo el potencial de esos tomates cherry que tan buen resultado dan.','Otro icono de la frescura italiana que podemos resolver con sólo un par de ingredientes: mozzarella y tomate.','El estilo provenzal de la ensalada niçoise (o nizarda) y todo su sabor se cuela en casa con esta receta en la que encontramos huerta y también un puntito salino.',
-'Si creías que la ensaladilla rusa no podía mejorarse tenemos una buena noticia para ti, o al menos, para darle un toque distinto','El Mediterráneo nos sirve de ejemplo para irradiar frescura desde sus platos y en este caso hacemos una versión griega donde no falta el queso feta y la aceituna negra.','Una de las guarniciones más populares de la cocina alemana y tan sencilla que pronto se convertirá en uno de tus básicos. Es una forma fácil y rápida de tomar patata, prescindiendo además de elaboraciones que aporten más grasa.','Aunque el namasu es un plato que se suele tomar en Año Nuevo, recurrir a esta receta de ensalada de encurtidos en verano nos parece una opción ideal.',
-'El contrapunto verde que toda gran barbacoa americana merece y que puedes utilizar en casa con tus asados o con tus parrilladas.','Convertimos a la patata en protagonista con este plato de inspiración francesa, aportando hidratos y energía y demostrando que una ensalada puede ser muy sustanciosa.','Cambiamos de registro y nos vamos a Asia para descubrir formas frescas y especiadas de convertir el pollo en el artista principal de una ensalada magnífica.','Fresca y oriental, esta receta es un clásico del Líbano pero es fácil encontrarla en otros países de Oriente Medio como Jordania, Turquía o Palestina.'];
-var pre_en=['$45.000','$50.000','$55.000','$70.000',
-'$50.000','$80.000','$85.000','$100.000',
-'$35.000','$15.000','$150.000','$200.000'];
+var menu_muestra_5=document.getElementById('menu_muestra_5');
+
 /*DATOS SOPAS*/
 var tit_sop=['Sopa de galets con jamón y queso de oveja','Sopa de tofu, trigo tierno y setas','Sopa de pollo y fideos','Sopa de miso con fideos soba, pollo y calabaza',
 'Sopa de cebolla, rape y almendras','Sopa de trigo tierno, pollo, setas y trufa negra','Sopa de pavo al curry','Sopa de puerros y nabos con aceite de jengibre',
@@ -50,27 +44,37 @@ var des_bre_bed=['Empezamos hidratando las chufas el día antes. Las ponemos en 
 var pre_bed=['$20.000','$15.000','$20.000','$5.000',
 '$10.000','$12.000','$5.000','$30.000',
 '$35.000','$50.000','$25.000','$80.000'];
+/*DATOS DE POSTRES*/
+var tit_pos=['Cheesecake congelado','Crepas de fresa y nutella','Semifrío de frambuesa','Vasitos de pera y tres chocolates',
+'Melocotones flameados','Gelatina de mosaico','Tarta fría de chocolate','Cupcakes de Chocolate',
+'Scones integrales con pasas','Flan de queso','Gomitas de sabores','Muffins de frutos rojos'];
+var des_bre_pos=['Este postre es muy atractivo preferido por los clientes','Las crepas de nutella y fresa son una opción fácil y rápida que puedes incorporar a tu menú de postres. Cómo hacer este postre es muy sencillo, debe ser preparado en el momento para servir caliente','Este postre es similar a la tarta de queso, es otro platillo del que podrás obtener ocho porciones, su preparación es muy fácil y solo necesitas refrigerar.','Los vasitos de pera y tres chocolates son un postre sencillo de preparar, ya que le  dedicarás poco tiempo. La siguiente receta es para cuatro porciones',
+'Este postre es perfecto para acompañar las crepas en tu negocio. También lo puedes vender en forma de dulce empacado en copitas de plástico o en un envase que se pueda calentar, recomienda a tu cliente que lo consuma caliente, ya que así conservará sus sabores.','La gelatina es una opción segura para la venta, puedes acompañar este postre con leche condensada y servirlos en vasos.','La tarta fría es uno de los favoritos para obtener ingresos adicionales a través de los postres.','En esta receta de Cupcakes de Chocolate tardas en la elaboración alrededor de 1 hora y 40 minutos para seis porciones, con una dificultad para realizarlo de baja-media. ',
+'Los Scones son panecillos muy reconocidos en Estados Unidos, Australia, Reino Unido, Escocia, entre otros países. ','El flan de queso es uno de los favoritos de las personas, es una opción económica para brindar un postre diferente y delicioso a tus clientes.','Las gomitas son las favoritas de muchas personas. En realidad, es uno de los postres más fáciles de hacer y vender dada su versatilidad.','Los muffins son la elección favorita de muchos, ya que tienen las cantidades ideales de dulce.'];
+var pre_pos=['$20.000','$15.000','$20.000','$5.000',
+'$10.000','$12.000','$5.000','$30.000',
+'$35.000','$50.000','$25.000','$80.000'];
 menu_1.onclick = function(){
-    menu_1.innerHTML ="<a href='#ensaladas' class='nav-link active'>ensaladas</a>";
+    menu_1.innerHTML ="<a href='#ensaladas' class='nav-link active' onclick=''>ensaladas</a>";
     menu_2.innerHTML ="<a href='#sopas' class='nav-link'>Sopas</a>";
     menu_3.innerHTML ="<a href='#aperitivos' class='nav-link'>Aperitivos</a>";
     menu_4.innerHTML ="<a href='#bebida' class='nav-link'>Bebida</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
-    menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
+    menu_5.innerHTML ="<a href='#postres' class='nav-link'>Postres</a>";
     //vaciador menus
     menu_muestra_2.innerHTML="";
     menu_muestra_3.innerHTML="";
     menu_muestra_4.innerHTML="";
+    menu_muestra_5.innerHTML="";
     //menu_1 llamado
     menu_muestra_1.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
     "<div class='col'>"+
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_1.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[0]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[0]+"</p>"+
-                    "<p class='card-text'>"+pre_en[0]+"</p>"+
-                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                    "<h5 class='card-title'>"+json.ensaladas[0].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[0].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[0].precio+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button' id='Ensalada_1' data-bs-toggle='modal' data-bs-target='#exampleModal'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -79,10 +83,10 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_2.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[1]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[1]+"</p>"+
-                    "<p class='card-text'>"+pre_en[1]+"</p>"+
-                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                    "<h5 class='card-title'>"+json.ensaladas[1].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[1].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[1].precio+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button' id='Ensalada_2' data-bs-toggle='modal' data-bs-target='#exampleModal_1'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
         "</div>"+
@@ -91,9 +95,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_3.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[2]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[2]+"</p>"+
-                    "<p class='card-text'>"+pre_en[2]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[2].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[2].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[2].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -103,9 +107,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_4.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[3]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[3]+"</p>"+
-                    "<p class='card-text'>"+pre_en[3]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[3].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[3].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[3].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -115,9 +119,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_5.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[4]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[4]+"</p>"+
-                    "<p class='card-text'>"+pre_en[4]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[4].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[4].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[4].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -127,9 +131,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_6.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[5]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[5]+"</p>"+
-                    "<p class='card-text'>"+pre_en[5]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[5].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[5].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[5].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -139,9 +143,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_7.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[6]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[6]+"</p>"+
-                    "<p class='card-text'>"+pre_en[6]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[6].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[6].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[6].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -151,9 +155,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_8.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[7]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[7]+"</p>"+
-                    "<p class='card-text'>"+pre_en[7]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[7].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[7].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[7].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -163,9 +167,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_9.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[8]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[8]+"</p>"+
-                    "<p class='card-text'>"+pre_en[8]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[8].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[8].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[8].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -175,9 +179,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_10.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[9]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[9]+"</p>"+
-                    "<p class='card-text'>"+pre_en[9]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[9].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[9].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[9].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -187,9 +191,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_11.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[10]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[10]+"</p>"+
-                    "<p class='card-text'>"+pre_en[10]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[10].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[10].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[10].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -199,9 +203,9 @@ menu_1.onclick = function(){
         "<div class='card h-100'>"+
             "<img src='img/ensaladas/en_12.webp' alt='...' class='card-img-top '>"+
                 "<div class='card-body'>"+
-                    "<h5 class='card-title'>"+tit_en[11]+"</h5>"+
-                    "<p class='card-text'>"+des_bre_en[11]+"</p>"+
-                    "<p class='card-text'>"+pre_en[11]+"</p>"+
+                    "<h5 class='card-title'>"+json.ensaladas[11].titulo+"</h5>"+
+                    "<p class='card-text'>"+json.ensaladas[11].descripcion+"</p>"+
+                    "<p class='card-text'>"+json.ensaladas[11].precio+"</p>"+
                     "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
                 "</div>"+
             "</img>"+
@@ -215,12 +219,12 @@ menu_2.onclick = function(){
     menu_2.innerHTML ="<a href='#sopas' class='nav-link active'>Sopas</a>";
     menu_3.innerHTML ="<a href='#aperitivos' class='nav-link'>Aperitivos</a>";
     menu_4.innerHTML ="<a href='#bebida' class='nav-link'>Bebida</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
-    menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
+    menu_5.innerHTML ="<a href='#postres' class='nav-link'>Postres</a>";
     //vaciador menus
     menu_muestra_1.innerHTML="";
     menu_muestra_3.innerHTML="";
     menu_muestra_4.innerHTML="";
+    menu_muestra_5.innerHTML="";
     //menu_2 llamado
     menu_muestra_2.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
     "<div class='col'>"+
@@ -375,12 +379,12 @@ menu_3.onclick = function(){
     menu_2.innerHTML ="<a href='#sopas' class='nav-link'>Sopas</a>";
     menu_3.innerHTML ="<a href='#aperitivos' class='nav-link active'>Aperitivos</a>";
     menu_4.innerHTML ="<a href='#bebida' class='nav-link'>Bebida</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
-    menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
+    menu_5.innerHTML ="<a href='#Postres' class='nav-link'>Postres</a>";
     //vaciador menus
     menu_muestra_1.innerHTML="";
     menu_muestra_2.innerHTML="";
     menu_muestra_4.innerHTML="";
+    menu_muestra_5.innerHTML="";
     //menu_3 llamado
      menu_muestra_3.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
      "<div class='col'>"+
@@ -535,12 +539,12 @@ menu_4.onclick = function(){
     menu_2.innerHTML ="<a href='#sopas' class='nav-link'>Sopas</a>";
     menu_3.innerHTML ="<a href='#aperitivos' class='nav-link'>Aperitivos</a>";
     menu_4.innerHTML ="<a href='#bebida' class='nav-link active'>Bebida</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
-    menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
+    menu_5.innerHTML ="<a href='#postres' class='nav-link'>Postres</a>";
     //vaciador menus
     menu_muestra_1.innerHTML="";
     menu_muestra_2.innerHTML="";
     menu_muestra_3.innerHTML="";
+    menu_muestra_5.innerHTML="";
     //menu_4 llamado
     menu_muestra_4.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
     "<div class='col'>"+
@@ -691,19 +695,161 @@ menu_4.onclick = function(){
 }
 
 menu_5.onclick = function(){
-    menu_1.innerHTML ="<a href='#prueba1' class='nav-link'>prueba1</a>";
-    menu_2.innerHTML ="<a href='#prueba2' class='nav-link'>prueba2</a>";
-    menu_3.innerHTML ="<a href='#prueba3' class='nav-link'>prueba3</a>";
-    menu_4.innerHTML ="<a href='#prueba4' class='nav-link'>prueba4</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link  active'>prueba5</a>";
-    menu_6.innerHTML ="<a href='#prueba6' class='nav-link'>prueba6</a>";
-}
-
-menu_6.onclick = function(){
-    menu_1.innerHTML ="<a href='#prueba1' class='nav-link'>prueba1</a>";
-    menu_2.innerHTML ="<a href='#prueba2' class='nav-link'>prueba2</a>";
-    menu_3.innerHTML ="<a href='#prueba3' class='nav-link'>prueba3</a>";
-    menu_4.innerHTML ="<a href='#prueba4' class='nav-link'>prueba4</a>";
-    menu_5.innerHTML ="<a href='#prueba5' class='nav-link'>prueba5</a>";
-    menu_6.innerHTML ="<a href='#prueba6' class='nav-link  active'>prueba6</a>";
+    menu_1.innerHTML ="<a href='#ensaladas' class='nav-link'>Ensaladas</a>";
+    menu_2.innerHTML ="<a href='#sopas' class='nav-link'>Sopas</a>";
+    menu_3.innerHTML ="<a href='#aperitivos' class='nav-link'>Aperitivos</a>";
+    menu_4.innerHTML ="<a href='#bebida' class='nav-link'>Bebida</a>";
+    menu_5.innerHTML ="<a href='#postres' class='nav-link  active'>Postres</a>";
+    //vaciador menus
+    menu_muestra_1.innerHTML="";
+    menu_muestra_2.innerHTML="";
+    menu_muestra_3.innerHTML="";
+    menu_muestra_4.innerHTML="";
+    //menu_5 llamado
+    menu_muestra_5.innerHTML="<div class='row row-cols-1 row-cols-md-3 g-4'>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_01.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[0]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[0]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[0]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_02.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[1]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[1]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[1]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_03.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[2]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[2]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[2]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_04.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[3]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[3]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[3]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_05.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[4]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[4]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[4]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_06.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[5]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[5]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[5]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_07.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[6]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[6]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[6]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_08.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[7]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[7]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[7]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_09.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[8]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[8]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[8]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_10.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[9]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[9]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[9]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_11.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[10]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[10]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[10]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+    "<div class='col'>"+
+        "<div class='card h-100'>"+
+            "<img src='img/postres/pos_12.webp' alt='...' class='card-img-top '>"+
+                "<div class='card-body'>"+
+                    "<h5 class='card-title'>"+tit_pos[11]+"</h5>"+
+                    "<p class='card-text'>"+des_bre_pos[11]+"</p>"+
+                    "<p class='card-text'>"+pre_pos[11]+"</p>"+
+                    "<a class='btn btn-primary' href='#' role='button'>Mas informacion</a>"+
+                "</div>"+
+            "</img>"+
+        "</div>"+
+    "</div>"+
+"</div>";
 }

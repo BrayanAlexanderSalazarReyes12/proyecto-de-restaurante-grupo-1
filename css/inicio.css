@@ -1,0 +1,19 @@
+
+
+.main_prensent{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.txt_pre{
+    position: absolute;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.ca_title{
+    text-align: center;
+}
+
+

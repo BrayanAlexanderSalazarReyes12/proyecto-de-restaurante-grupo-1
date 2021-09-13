@@ -59,7 +59,7 @@
                             <a class="nav-link" href="#">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#menu">Menú</a>
+                            <a class="nav-link" href="#">Menú</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Servicios</a>
@@ -70,7 +70,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#mapa">Mapa</a>
                         </li>
-
+                        
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -105,7 +105,7 @@
     <!-- -----------------------------CONTENT--------------------------------- -->
 
     <!-- INICIO MENU -->
-    <div class="content" id="menu">
+    <div class="content">
         <div class="container_12">
             <div class="grid_12">
                 <h3 class="head2">NUESTRO MENU</h3>
@@ -114,36 +114,19 @@
     
         <div class="partes_menu">
             <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item" id="menu_1"><a href="#ensaladas" class="nav-link">Ensaladas</a></li>
-                <li class="nav-item" id="menu_2"><a href="#sopas" class="nav-link">Sopas</a></li>
-                <li class="nav-item" id="menu_3"><a href="#aperitivos" class="nav-link">Aperitivos</a></li>
-                <li class="nav-item" id="menu_4"><a href="#bebida" class="nav-link">Bebida</a></li>
-                <li class="nav-item" id="menu_5"><a href="#prueba5" class="nav-link">prueba5</a></li>
-                <li class="nav-item" id="menu_6"><a href="#prueba6" class="nav-link">prueba6</a></li>
+                <li class="nav-item" id="menu_1"><a href="menus/ensaladas.html" class="nav-link">Ensaladas</a></li>
+                <li class="nav-item" id="menu_2"><a href="menus/sopas.html" class="nav-link">Sopas</a></li>
+                <li class="nav-item" id="menu_3"><a href="menus/aperitivos.html" class="nav-link">Aperitivos</a></li>
+                <li class="nav-item" id="menu_4"><a href="menus/bebida.html" class="nav-link">Bebida</a></li>
+                <li class="nav-item" id="menu_5"><a href="menus/postres.html" class="nav-link">Postres</a></li>
             </ul>
         </div>
-
-        <div class="menu_muestra_1" id="menu_muestra_1">
-            
-        </div>
-
-        <div class="menu_muestra_2" id="menu_muestra_2">
-            
-        </div>
-
-        <div class="menu_muestra_3" id="menu_muestra_3">
-            
-        </div>
-
-        <div class="menu_muestra_4" id="menu_muestra_4">
-            
-        </div>
+        <a href="carta/menu.pdf" class='btn btn-primary' href='#' role='button'><i class="fa fa-download"></i>DESCARGAR MENU</a>
     </div>
-    
-
     <!-- FIN MENU -->
     <!-- ------------------------------FIN DEL CONTENT-------------------------------- -->
-<br><br><br>
+
+
     <!-- SECTION DE CONTACTACTENOS -->
     <section id="contactos" class="contactanos row m-0">
         <div class="texto col-12 col-md-6 d-flex justify-content-center align-items-center">
@@ -156,20 +139,28 @@
         </div>
         <div class="formulario col-12 col-md-6">
             <div class="container">
-                <form>
+                <form id="contactanos">
                     <div class="mb-3 row">
                         <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                         <div class="col-sm-1-12">
-                            <input type="text" class="form-control" name="inputName" id="inputName"
-                                placeholder="Nombre">
+                            <input type="text" minlength="4" maxlength="9" class="form-control" name="nombre" id="nombres"
+                                placeholder="Nombre" required>
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                         <div class="col-sm-1-12">
-                            <input type="text" class="form-control" name="inputName" id="inputName"
-                                placeholder="Correo">
+                            <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="correo" id="correo"
+                                placeholder="Correo" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control" name="telefono" id="telefono"
+                                placeholder="Telefono" required>
                         </div>
                     </div>
 
@@ -179,7 +170,7 @@
                     </div>
 
                     <div class="form-check pb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="" id="terminos" required>
                         <label class="form-check-label text-white" for="flexCheckDefault">
                             Acepto Terminos y condiciones
                         </label>
@@ -191,6 +182,7 @@
                         </div>
                     </div>
                 </form>
+
             </div>
         </div>
     </section>
@@ -199,16 +191,16 @@
 
 <!--*************************************SECTION MAPA*******************************************-->
 
-    <section id="mapa" >
+<section id="mapa" >
         
-            <div class="container_1" >
-                <div class="grid_1">
-                    <h3 class="head3">MAPA DEL SITIO</h3>
-                </div>
-            </div>
-        
+    <div class="container_1" >
+        <div class="grid_1">
+            <h3 class="head3">MAPA DEL SITIO</h3>
+        </div>
+    </div>
 
-        <div class="lista_mapa  border border-danger">
+
+    <div class="lista_mapa  border border-danger">
 
         <div class="lista_mapa">
             <div class="row">  
@@ -239,6 +231,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
 
@@ -278,11 +271,6 @@
 
 
 
-
-
-
-
-
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -291,8 +279,6 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
 
-    <!--JS MENU-->
-    <script src="http://127.0.0.1:5500/proyecto-de-restaurante-grupo-1/js/menu.js" crossorigin="brayan alexander salazar reyes"></script>
 </body>
 
 </html>

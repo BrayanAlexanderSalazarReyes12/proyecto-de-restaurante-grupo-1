@@ -4,6 +4,7 @@
     top: 100px;
     right: 10px;
     background: black;
+    background: transparent;
 }
 .redes ul{
     padding: 0;
@@ -13,6 +14,18 @@
     list-style: none;
     display: flex;
     justify-content: center;
+}
+
+.redes ul li:nth-of-type(1){
+    background: #051e60;
+    border-radius: 5px 5px 0px 0px;
+}
+.redes ul li:nth-of-type(2){
+    background: #1686c5;
+}
+.redes ul li:nth-of-type(3){
+    background: red;
+    border-radius: 0px 0px 5px 5px;
 }
 .redes ul li a{
     color: white !important;

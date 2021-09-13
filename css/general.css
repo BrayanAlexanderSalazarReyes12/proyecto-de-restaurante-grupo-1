@@ -63,3 +63,7 @@ a.nav-link{
     font-family: var(--fuente);
     font-weight: var(--weight-subtitulos);
 }
+
+div.serviciosof{
+    background: var(--color-3);
+}

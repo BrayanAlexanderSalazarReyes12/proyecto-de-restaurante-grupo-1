@@ -59,7 +59,11 @@ div.partes_menu{
 }
 
 a.nav-link{
+<<<<<<< HEAD
     color: black !important;
+=======
+    color: white !important;
+>>>>>>> jhonnier-de-la-cruz
     font-family: var(--fuente);
     font-weight: var(--weight-subtitulos);
 }

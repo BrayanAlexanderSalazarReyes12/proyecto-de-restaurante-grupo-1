@@ -14,7 +14,6 @@ header{
     position: fixed;
     width: 100%;
     z-index: 10;
-    
 }
 header nav{
     background: var(--color-5);
@@ -29,12 +28,7 @@ header nav ul li a{
     font-weight: var(--weight-parrafos);
     color: white !important;
     border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    padding: .5rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+    padding-left: 10px !important;
 }
 header nav ul li a:hover{
     background: white;
@@ -65,15 +59,7 @@ div.partes_menu{
 }
 
 a.nav-link{
-<<<<<<< HEAD
-    color: black !important;
-=======
     color: white !important;
->>>>>>> jhonnier-de-la-cruz
     font-family: var(--fuente);
     font-weight: var(--weight-subtitulos);
-}
-
-div.serviciosof{
-    background: var(--color-3);
 }

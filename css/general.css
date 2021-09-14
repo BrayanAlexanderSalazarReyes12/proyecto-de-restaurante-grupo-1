@@ -63,3 +63,9 @@ a.nav-link{
     font-family: var(--fuente);
     font-weight: var(--weight-subtitulos);
 }
+
+div.serviciosof{
+    background: var(--color-3);
+    padding-top: 5mm;
+    padding-block-end: 5mm;
+}

@@ -24,8 +24,8 @@ header nav .navbar-brand{
     color: white;
 }
 header nav ul li a{
-    font-family: var(--fuente);
-    font-weight: var(--weight-parrafos);
+    font-family: var(--fuente) !important;
+    font-weight: var(--weight-parrafos) !important;
     color: white !important;
     border-radius: 10px;
     padding-left: 10px !important;
@@ -68,4 +68,13 @@ div.serviciosof{
     background: var(--color-3);
     padding-top: 5mm;
     padding-block-end: 5mm;
+}
+
+
+@media screen and (max-width: 576px){
+    .slider-img{
+        width:104px !important;
+        height: 70%;
+        overflow: hidden;
+    }
 }

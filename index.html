@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/servicios.css">
     <link rel="stylesheet" href="css/contactanos.css">
     <link rel="stylesheet" href="css/mapa.css">
+    <link rel="stylesheet" href="css/pagina_carrito.css">
     <link rel="stylesheet" href="css/icono_carrito.css">
 
     <!-- ANIMATE -->
@@ -107,9 +108,12 @@
     
     
     <!-- CARRITO DE COMPRAS -->
-    <a href="carrito.html" class="icon-carrito">
-        <i class="fas fa-cart-arrow-down"></i>
-    </a>
+    <div class="icon-carrito">
+        <i class="fas fa-cart-arrow-down" data-bs-toggle="modal" href="#exampleModalToggle"></i>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1"></div>
+    
     <!-- CARRITO DE COMPRAS -->
 
 
@@ -598,7 +602,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
-
+    <!--Librerias js creadas-->
+    <script type="text/javascript" src="js/carrito_de_compra.js"></script>
 </body>
 
 </html>

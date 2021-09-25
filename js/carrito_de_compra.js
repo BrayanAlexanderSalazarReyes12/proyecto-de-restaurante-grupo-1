@@ -26,7 +26,7 @@ function carrito(){
                                 '</div>'+
                             '</div>'+
                         '</div>'+
-                        '<div class="list-prod col-12 col-lg-5 d-flex flex-column justify-content-center align-items-center">'+
+                        '<div class="list-prod col-12 col-lg-5 d-flex flex-column justify-content-center align-items-center" id="lista_de_compra">'+
                             '<div class="scroll">'+
                                 '<div class="producto">'+
                                     '<img class="col-5" src="img/carrito/img1.jpg" alt="">'+

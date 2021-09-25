@@ -1,6 +1,7 @@
 @media screen and (max-width: 990px){
     .carrito{
         height:auto !important;
+        background: white;
     }
     .carrito .carrito-total{
         height: 400px;

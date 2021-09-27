@@ -4,15 +4,16 @@
  * @version 	0.1
  */
 
-var modal = document.querySelector('.icon-carrito');
-const list_prod = document.querySelector("#productos")
-const productos = ['Nombre 1','Nombre 2','Nombre 3','Nombre 4','Nombre 5','Nombre 6'];
+var modal = document.getElementById("carrito_de_compras");
+var list_prod = document.getElementById("productos")
+var productos = ['Nombre 1','Nombre 2','Nombre 3','Nombre 4','Nombre 5','Nombre 6'];
 var listaP = '';
-
-listar_productos = (productos) => {
-    for (let index = 0; index < productos.length; index++) {
-        const producto = productos[index];
-        
+var cerrar_carrito = document.getElementById("cerrar_carrito");
+var parentElement_resta = document.getElementById('resta');
+var parentElement_suma = document.getElementById('suma');
+modal.onclick = function(){
+    for(i=0; i<productos.length; i++){
+        var producto = productos[i];
         listaP +=
         `
         <div class="producto">
@@ -25,9 +26,9 @@ listar_productos = (productos) => {
                 <p class="text-break text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur placeat labore inventore at enim doloribus rem, quasi, dolorem iste sit veritatis quibusdam beatae laboriosam in itaque! Ducimus, perferendis doloribus.</p>
                 <div class="w-100 d-flex justify-content-around position-absolute" style="bottom: 10px;">
                     <div class="add_delet">
-                        <small>-</small>
-                        <small>1</small>
-                        <small>+</small>
+                        <small id="resta_${i+1}">-</small>
+                        <small id="cantidad_${i+1}">1</small>
+                        <small id="suma_${i+1}">+</small>
                     </div>
                     <div class="iconos">
                         <i class="far fa-trash-alt"></i>
@@ -40,156 +41,43 @@ listar_productos = (productos) => {
         
         `;
     }
-
     list_prod.innerHTML = listaP;
+   
+    /** 
+     * @guardar_operaciones_productos
+    */
+    var cantidad_productos_resta = new Array(productos.length);
+    for(i=0; i<productos.length;i++){
+        var cont = i+1;
+        cantidad_productos_resta[i] = document.getElementById("resta_"+cont);
+    }
+    /** 
+     * @realizar_operaciones_productos_resta
+    */
+    var theFirstChild = parentElement_resta.firstChild;
+    for(i=0; i<productos.length;i++){
+        var cont = i+1;
+        var g = document.createElement('script');
+        g.text = "var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"resta_"+cont+".onclick = function(){if(a_"+cont+">1){a_"+cont+" = a_"+cont+" - 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); }}"        
+        parentElement_resta.insertBefore(g,theFirstChild);        
+    }
+    /** 
+     * @realizar_operaciones_productos_suma
+    */
+    var theFirstChildSuma = parentElement_suma.firstChild;
+    for(i=0; i<productos.length;i++){
+        var cont = i+1;
+        localStorage.setItem("cantidad_pedidos_"+cont,1);
+        var g = document.createElement('script');
+        g.text = "var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"suma_"+cont+".onclick = function(){if(a_"+cont+"<30){a_"+cont+" = a_"+cont+" + 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+");}}"        
+        parentElement_suma.insertBefore(g,theFirstChildSuma);        
+    }
 }
 
-
-
-modal.addEventListener("click", () => {
-    listar_productos(productos)
-})
-
-
-/* function carrito(){
-    modal.innerHTML = "<div class='modal-dialog modal-fullscreen'>"+
-            "<div class='modal-content'>"+
-                "<div class='modal-header'>"+
-                    "<h1 class='display-5'>Carrito De Compra</h1>"+
-                    "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>"+
-                "</div>"+
-                    '<section class="carrito row m-0">'+
-                        '<div class="carrito-total col-12 col-lg-7 d-flex justify-content-center align-items-center">'+
-                            '<div class="btn-pagar d-flex flex-column justify-content-around">'+
-                                '<div class="d-flex justify-content-around">'+
-                                    '<strong class="display-6">Total</strong>'+ 
-                                    '<strong class="display-6">$75,000</strong>'+
-                                '</div>'+
-                                '<div class="text-center d-flex flex-column">'+
-                                    '<button>Pagar ahora</button>'+
-                                    '<button>Continuar Comprando</button>'+
-                                '</div>'+
-                            '</div>'+
-                        '</div>'+
-                        '<div class="list-prod col-12 col-lg-5 d-flex flex-column justify-content-center align-items-center" id="lista_de_compra">'+
-                            '<div class="scroll">'+
-                                '<div class="producto">'+
-                                    '<img class="col-5" src="img/carrito/img1.jpg" alt="">'+
-                                    '<div class="descripcion col-7 position-relative">'+
-                                        '<div class="d-flex justify-content-between">'+
-                                            '<strong class="titulo col-4">Titulo</strong>'+
-                                            '<strong class="precio">$25,000</strong>'+
-                                        '</div>'+
-                                        '<p class="text-break text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur placeat labore inventore at enim doloribus rem, quasi, dolorem iste sit veritatis quibusdam beatae laboriosam in itaque! Ducimus, perferendis doloribus.</p>'+
-                                        '<div class="w-100 d-flex justify-content-around position-absolute" style="bottom: 10px;">'+
-                                            '<div class="add_delet">'+
-                                                '<small>-</small>'+
-                                                '<small>+1</small>'+
-                                                '<small>+</small>'+
-                                            '</div>'+
-                                            '<div class="iconos">'+
-                                                '<i class="far fa-trash-alt">'+'</i>'+
-                                                '<i class="fas fa-plus">'+'</i>'+
-                                            '</div>'+
-                                            
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>'+
-                                '<div class="producto">'+
-                                    '<img class="col-5" src="img/carrito/img1.jpg" alt="">'+
-                                    '<div class="descripcion col-7 position-relative">'+
-                                        '<div class="d-flex justify-content-between">'+
-                                            '<strong class="titulo col-4">Titulo</strong>'+
-                                            '<strong class="precio">$25,000</strong>'+
-                                        '</div>'+
-                                        '<p class="text-break text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur placeat labore inventore at enim doloribus rem, quasi, dolorem iste sit veritatis quibusdam beatae laboriosam in itaque! Ducimus, perferendis doloribus.</p>'+
-                                        '<div class="w-100 d-flex justify-content-around position-absolute" style="bottom: 10px;">'+
-                                            '<div class="add_delet">'+
-                                                '<small>-</small>'+
-                                                '<small>1</small>'+
-                                                '<small>+</small>'+
-                                            '</div>'+
-                                            '<div class="iconos">'+
-                                                '<i class="far fa-trash-alt">'+'</i>'+
-                                                '<i class="fas fa-plus">'+'</i>'+
-                                            '</div>'+
-                                            
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>'+
-                                '<div class="producto">'+
-                                    '<img class="col-5" src="img/carrito/img1.jpg" alt="">'+
-                                    '<div class="descripcion col-7 position-relative">'+
-                                        '<div class="d-flex justify-content-between">'+
-                                            '<strong class="titulo col-4">Titulo</strong>'+
-                                            '<strong class="precio">$25,000</strong>'+
-                                        '</div>'+
-                                        '<p class="text-break text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur placeat labore inventore at enim doloribus rem, quasi, dolorem iste sit veritatis quibusdam beatae laboriosam in itaque! Ducimus, perferendis doloribus.</p>'+
-                                        '<div class="w-100 d-flex justify-content-around position-absolute" style="bottom: 10px;">'+
-                                            '<div class="add_delet">'+
-                                                '<small>-</small>'+
-                                                '<small>1</small>'+
-                                                '<small>+</small>'+
-                                            '</div>'+
-                                            '<div class="iconos">'+
-                                                '<i class="far fa-trash-alt">'+'</i>'+
-                                                '<i class="fas fa-plus">'+'</i>'+
-                                            '</div>'+
-                                            
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>'+
-                                '<div class="producto">'+
-                                    '<img class="col-5" src="img/carrito/img1.jpg" alt="">'+
-                                    '<div class="descripcion col-7 position-relative">'+
-                                        '<div class="d-flex justify-content-between">'+
-                                            '<strong class="titulo col-4">Titulo</strong>'+
-                                            '<strong class="precio">$25,000</strong>'+
-                                        '</div>'+
-                                        '<p class="text-break text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur placeat labore inventore at enim doloribus rem, quasi, dolorem iste sit veritatis quibusdam beatae laboriosam in itaque! Ducimus, perferendis doloribus.</p>'+
-                                        '<div class="w-100 d-flex justify-content-around position-absolute" style="bottom: 10px;">'+
-                                            '<div class="add_delet">'+
-                                                '<small>-</small>'+
-                                                '<small>1</small>'+
-                                                '<small>+</small>'+
-                                            '</div>'+
-                                            '<div class="iconos">'+
-                                                '<i class="far fa-trash-alt">'+'</i>'+
-                                                '<i class="fas fa-plus">'+'</i>'+
-                                            '</div>'+
-                                            
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>'+
-                                '<div class="producto">'+
-                                    '<img class="col-5" src="img/carrito/img1.jpg" alt="">'+
-                                    '<div class="descripcion col-7 position-relative">'+
-                                        '<div class="d-flex justify-content-between">'+
-                                            '<strong class="titulo col-4">Titulo</strong>'+
-                                            '<strong class="precio">$25,000</strong>'+
-                                        '</div>'+
-                                        '<p class="text-break text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur placeat labore inventore at enim doloribus rem, quasi, dolorem iste sit veritatis quibusdam beatae laboriosam in itaque! Ducimus, perferendis doloribus.</p>'+
-                                        '<div class="w-100 d-flex justify-content-around position-absolute" style="bottom: 10px;">'+
-                                            '<div class="add_delet">'+
-                                                '<small>-</small>'+
-                                                '<small>1</small>'+
-                                                '<small>+</small>'+
-                                            '</div>'+
-                                            '<div class="iconos">'+
-                                                '<i class="far fa-trash-alt">'+'</i>'+
-                                                '<i class="fas fa-plus">'+'</i>'+
-                                            '</div>'+
-                                            
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>'+
-                                
-                            '</div>'+
-                        '</div>'+
-                    '</section>'+
-            "</div>"+
-        "</div>";
-} */
-
-window.onload = carrito;
+cerrar_carrito.onclick = function(){
+    list_prod.innerHTML = "";
+    listaP = "";
+    parentElement_resta.innerHTML = "<div id='hijo_resta'></div>";    
+    parentElement_suma.innerHTML = "<div id='hijo_suma'></div>";
+}
 

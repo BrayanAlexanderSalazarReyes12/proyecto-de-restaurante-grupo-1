@@ -1,1 +1,91 @@
 /*Mapa del sitio*/
+
+
+
+
+h3.head3 {
+	text-align: center;
+    font-family: 'Roboto', sans-serif;
+	padding-top: 150px;
+    color: #D95204;
+    font-size: 40px;
+    text-decoration: overline;
+}
+
+
+div.lista_mapa{
+    font-family: 'Roboto', sans-serif;
+    background-color: #A61103;
+    color: white;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    padding-left: 7%;
+    margin-right: 0;
+}
+
+div.lista_mapa a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+div.lista_mapa a:hover{
+    color: rgb(22, 27, 20);
+}
+
+div.lista_mapa h5{
+    text-decoration: overline;
+}
+
+div.lista_mapa h3{
+    padding-top: 1%;
+    color:slategrey;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.mapa_google{
+    overflow:hidden;
+    padding-bottom:400px;
+    position:relative;
+    height:0;
+}
+
+.mapa_google iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:84%;
+    position:absolute;
+    padding-left: 10%;
+    padding-bottom: 2%;
+}
+
+/*PIE DE PAGINA*/
+footer {
+    text-align: center;
+	background:linear-gradient(to bottom, #A61103, rgb(20, 5, 5));
+	height: 50%;
+    color: white;
+    padding-top: 20px;
+}
+
+.main1 { 
+  display:flex;
+  margin:0 auto;
+}
+
+
+div.redes-footer{
+    font-size: 30px;
+    padding-left: 5%;
+}
+div.redes-footer a:hover{
+    color: blanchedalmond;
+}
+
+h6.text-footer{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(136, 178, 197);
+}
+

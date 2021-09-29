@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="css/servicios.css">
     <link rel="stylesheet" href="css/contactanos.css">
     <link rel="stylesheet" href="css/mapa.css">
+    <link rel="stylesheet" href="css/pagina_carrito.css">
+    <link rel="stylesheet" href="css/icono_carrito.css">
+    <link rel="stylesheet" href="css/reservas.css">
 
     <!-- ANIMATE -->
     <link
@@ -68,6 +71,9 @@
                             <a class="nav-link" href="#contactos">Contactanos</a>
                         </li>
                         <li class="nav-item">
+                            <a class="reserv nav-link" href="#">Reserva</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#mapa">Mapa</a>
                         </li>
                         
@@ -101,6 +107,72 @@
         </ul>
     </div>
     <!-- FIN DE REDES SOCIALES -->
+
+    
+    
+    
+    <!-- CARRITO DE COMPRAS -->
+    <div class="icon-carrito" id="carrito_de_compras">
+        <i class="fas fa-cart-arrow-down" data-bs-toggle="modal" href="#exampleModalToggle" ></i>
+    </div>
+    <!-- Modal del carrito -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class='modal-dialog modal-fullscreen'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <h1 class='display-5 text-center'>Carrito De Compra</h1>
+                    <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close' id="cerrar_carrito"></button>
+                </div>
+                <!-- Carrito -->
+                <section class="carrito row m-0">
+                    <div class="carrito-total col-12 col-lg-7 d-flex justify-content-center align-items-center">
+                        <div class="btn-pagar d-flex flex-column justify-content-around">
+                            <div class="d-flex justify-content-around">
+                                <strong class="display-6">Total</strong> 
+                                <strong class="display-6">$75,000</strong>
+                            </div>
+                            <div class="text-center d-flex flex-column">
+                                <button>Pagar ahora</button>
+                                <button>Continuar Comprando</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-prod col-12 col-lg-5 d-flex justify-content-center align-items-center">
+                        <div id="productos" class="scroll">
+                            <!-- <div class="producto">
+                                <img class="col-5" src="img/carrito/img1.jpg" alt="">
+                                <div class="descripcion col-7 position-relative">
+                                    <div class="d-flex justify-content-between">
+                                        <strong class="titulo col-4">Titulo</strong>
+                                        <strong class="precio">$25,000</strong>
+                                    </div>
+                                    <p class="text-break text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur placeat labore inventore at enim doloribus rem, quasi, dolorem iste sit veritatis quibusdam beatae laboriosam in itaque! Ducimus, perferendis doloribus.</p>
+                                    <div class="w-100 d-flex justify-content-around position-absolute" style="bottom: 10px;">
+                                        <div class="add_delet">
+                                            <small>-</small>
+                                            <small>1</small>
+                                            <small>+</small>
+                                        </div>
+                                        <div class="iconos">
+                                            <i class="far fa-trash-alt"></i>
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div id=resta><div id="hijo_resta"></div></div>
+    <div id=suma><div id="hijo_suma"></div></div>
+    <!-- CARRITO DE COMPRAS -->
+
+
+
 
     <!-- -----------------------------CONTENT--------------------------------- -->
 
@@ -144,7 +216,7 @@
          <div class="txt_pre">
 
              <h1>Nuestra propuesta</h1>
-             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione debitis itaque dolorum animi! Nisi modi aut recusandae nesciunt perspiciatis laborum, odit rerum amet accusamus. Soluta quasi non fuga. Commodi, fugit!
+             <p style="height:144px; overflow:hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione debitis itaque dolorum animi! Nisi modi aut recusandae nesciunt perspiciatis laborum, odit rerum amet accusamus. Soluta quasi non fuga. Commodi, fugit!
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, vitae libero! Aliquam vel fuga itaque, eum, esse facere quam laborum odio, eveniet voluptates est quia mollitia veniam tempora hic delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rerum nisi at magnam earum! Illo exercitationem provident quasi rerum, unde adipisci, debitis excepturi error accusantium impedit obcaecati, cumque dignissimos earum?</p>
          </div> 
 
@@ -203,7 +275,7 @@
             <!-- ----------Fin de recomendaciones-------- -->
 
                 </div >
-                 <div class=" col-6 p-5">
+                 <div class="col">
                       <img src="img/menu@2x.png" class="img-thumbnail" alt="menu">
 
                 </div>
@@ -216,7 +288,7 @@
         <div class="txt_pre">
 
             <h1 class="title_pre">Organizamos tu evento</h1>
-            <p class="parra-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione debitis itaque dolorum animi! Nisi modi aut recusandae nesciunt perspiciatis laborum, odit rerum amet accusamus. Soluta quasi non fuga. Commodi, fugit!
+            <p class="parra-title" style="height:144px; overflow:hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione debitis itaque dolorum animi! Nisi modi aut recusandae nesciunt perspiciatis laborum, odit rerum amet accusamus. Soluta quasi non fuga. Commodi, fugit!
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, vitae libero! Aliquam vel fuga itaque, eum, esse facere quam laborum odio, eveniet voluptates est quia mollitia veniam tempora hic delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rerum nisi at magnam earum! Illo exercitationem provident quasi rerum, unde adipisci, debitis excepturi error accusantium impedit obcaecati, cumque dignissimos earum?</p>
         </div> 
      
@@ -237,7 +309,7 @@
                     <div class="d-flex align-items-center">
                         <img class="col-6" src="img/testimonio1@2x.png" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 60px;" alt="">
 
-                        <p style="width: 470px; display: inline;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, iste tenetur, tempore, dicta deleniti nihil sunt molestias recusandae blanditiis quas fugiat beatae eos accusamus laudantium voluptates totam cupiditate nesciunt nulla.</p>
+                        <p class="slider-img" style="width: 470px; display: inline;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, iste tenetur, tempore, dicta deleniti nihil sunt molestias recusandae blanditiis quas fugiat beatae eos accusamus laudantium voluptates totam cupiditate nesciunt nulla.</p>
                     </div>
                 </div>
             </div>
@@ -274,38 +346,37 @@
         </div>
 
         <div id="equipo">
-            <h1 style="color: #fff;"> Equipo de trabajo</h1>
-               <div class="row">
-                   <div class="col-4 p-5">
-                       <img src="img/personal1@2x.png" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
-                       <div class="txt_equi">
-                          <h5 style="color: #fff;">carlos</h2>
-                        
-                       </div>
-                       </div>
-                   <div class="col-4 p-5">
-                       <img src="img/personal2@2x.png" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
-                       <h5 style="color: #fff;"> maria</h5>
-                   </div>
-                   <div class="col-4 p-5">
-                       <img src="img/personal3@2x.png" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
-                       <h5 style="color: #fff;"> julia</h5>
-                   </div>
-               </div>
-               <div class="row">
-                   <div class="col-4 p-5">
-                        <img src="img/peronal4.jpg " style="width: 100px; height: 100px; border-radius: 50%;" alt="">
-                        <h5 style="color: #fff;"> sergio</h5>
-                       </div>
-                   <div class="col-4 p-5">
-                       <img src="img/personal5.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
-                       <h5 style="color: #fff;"> juan</h5>
-                   </div>
-                   <div class="col-4 p-5">
-                       <img src="img/personal6.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
-                       <h5 style="color: #fff;"> camila</h5>
-                   </div>
-               </div>
+            <center>
+                <h1 style="color: #fff;"> Equipo de trabajo</h1>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <img src="img/personal1@2x.png" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <div class="txt_equi">
+                            <h5 style="color: #fff;">carlos</h2>
+                        </div>
+                        </div>
+                    <div class="col">
+                        <img src="img/personal2@2x.png" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <h5 style="color: #fff;"> maria</h5>
+                    </div>
+                    <div class="col">
+                        <img src="img/personal3@2x.png" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <h5 style="color: #fff;"> julia</h5>
+                    </div>
+                    <div class="col">
+                            <img src="img/peronal4.jpg " style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                            <h5 style="color: #fff;"> sergio</h5>
+                        </div>
+                    <div class="col">
+                        <img src="img/personal5.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <h5 style="color: #fff;"> juan</h5>
+                    </div>
+                    <div class="col">
+                        <img src="img/personal6.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <h5 style="color: #fff;"> camila</h5>
+                    </div>
+                </div>
+            </center>
         </div>
 
 
@@ -339,7 +410,7 @@
             <div class="texto col-12 col-md-6 d-flex justify-content-center align-items-center">
                 <div>
                     <h1 class="text-center">Servicios</h1>
-                    <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    <p class="text-center" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                         Esse eius, architecto ipsum delectus placeat odit veritatis reprehenderit vero 
                         assumenda id? Laborum quo numquam nihil enim, odit consequatur quasi cum. 
                         Exercitationem odit ea qui quo fugit id ipsa quos voluptatum, beatae placeat 
@@ -356,7 +427,7 @@
                                 <div class="card-body">
                                 <h5 class="card-title">Celebración de cumpleaños</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a class='btn btn-primary' href='#contactos' role='button'>¿PRGUNTAS?CONTACTANOS</a>
+                                <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>
                                 </div>
                             </div>
                             </div>
@@ -366,7 +437,7 @@
                                 <div class="card-body">
                                 <h5 class="card-title">Aniversarios</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a class='btn btn-primary' href='#contactos' role='button'>¿PRGUNTAS?CONTACTANOS</a>
+                                <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>
                             </div>
                             </div>
                             </div>
@@ -376,7 +447,7 @@
                                 <div class="card-body">
                                 <h5 class="card-title">Fiestas infantiles</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                                <a class='btn btn-primary' href='#contactos' role='button'>¿PRGUNTAS?CONTACTANOS</a>    
+                                <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>    
                             </div>
                             </div>
                             </div>
@@ -386,7 +457,7 @@
                                 <div class="card-body">
                                 <h5 class="card-title">Declaracione y propuestas</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a class='btn btn-primary' href='#contactos' role='button'>¿PRGUNTAS?CONTACTANOS</a>    
+                                <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>    
                             </div>
                             </div>
                             </div>
@@ -396,7 +467,7 @@
                                     <div class="card-body">
                                     <h5 class="card-title">Despedidas</h5>
                                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <a class='btn btn-primary' href='#contactos' role='button'>¿PRGUNTAS?CONTACTANOS</a>    
+                                    <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>    
                                 </div>
                                 </div>
                             </div>
@@ -406,7 +477,7 @@
                                     <div class="card-body">
                                     <h5 class="card-title">Cena con amigos</h5>
                                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <a class='btn btn-primary' href='#contactos' role='button'>¿PRGUNTAS?CONTACTANOS</a>    
+                                    <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>    
                                 </div>
                                 </div>
                             </div>
@@ -420,7 +491,8 @@
     <!-- ------------------------------FIN DEL CONTENT-------------------------------- -->
 
     <!-- SECTION DE CONTACTACTENOS -->
-    <section id="contactos" class="contactanos row m-0">
+        
+        <section id="contactos" class="contactanos row m-0">
         <div class="texto col-12 col-md-6 d-flex justify-content-center align-items-center">
             <div>
                 <h1 class="text-center">Contáctanos</h1>
@@ -431,7 +503,9 @@
         </div>
         <div class="formulario col-12 col-md-6">
             <div class="container">
-                <form id="contactanos">
+                <form id="contactanos" action="https://formsubmit.co/jhonierg20@gmail.com" method="POST" >
+                <!--<input type="hidden" name="_captcha" value="false">-->    
+                    <input type="hidden" name="_autoresponse" value="Reserva Confirmada">
                     <div class="mb-3 row">
                         <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                         <div class="col-sm-1-12">
@@ -443,7 +517,7 @@
                     <div class="mb-3 row">
                         <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                         <div class="col-sm-1-12">
-                            <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="correo" id="correo"
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="email" id="correo"
                                 placeholder="Correo" required>
                         </div>
                     </div>
@@ -474,11 +548,147 @@
                         </div>
                     </div>
                 </form>
-
+                
             </div>
         </div>
     </section>
     <!-- FIN DE CONTACTENOS -->
+
+
+<!--RESERVACIONES-->
+
+<section class="reservaciones">
+    <div class="modal-reservas col-12" id="modal-rese">
+        <div class="modal1  modal-close col-10" >
+            <p class="close">X</p>
+            <div class="modal-textos">
+                <h2>Reserva en Linea</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                <hr>
+                <!--Cards de Servicios-->
+                <div class="" id="reservas-">
+                        <div class="serviciosof col-12">
+                            <div class="Servicios_card">
+                                <div class="container">
+                                    <div class="row row-cols-1 row-cols-md-6 g-1">
+                                        <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Celebración de cumpleaños</h5>
+                                            <button type="button" style="background: rgb(37, 81, 175);color: white;" class="btn btn-cumple btn-ttc">Seleccionar</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Aniversarios</h5>
+                                            <br>
+                                            <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-aniversario btn-ttc">Seleccionar</button>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Fiestas infantiles</h5>
+                                            <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-infantiles btn-ttc">Seleccionar</button>    
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Declaraciones y propuestas</h5>
+                                            <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-declaraciones btn-ttc">Seleccionar</button>    
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Despedidas</h5>
+                                                <br>
+                                                <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-despedidas btn-ttc">Seleccionar</button>    
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Cena con amigos</h5>
+                                                
+                                                <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-cena btn-ttc">Seleccionar</button>    
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    <!--Formulario-->
+                    <div class="formulario-reservas col-8">
+                            
+                            <form class="col-8 justify-content-center" id="form-resevas" action="https://formsubmit.co/jhonierg20@gmail.com" method="POST" >
+                                <div class=" tipo-reserva" id="respuesta" name="reserva" >
+                                
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                                    <div class="col-sm-1-12 row-cols-md-1">
+                                        <input type="text" minlength="4" maxlength="9" class="form-control" name="nombre" id="nombres"
+                                            placeholder="Nombre" required>
+                                    </div>
+                                </div>
+            
+                                <div class="mb-3">
+                                    <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                                    <div class="col-sm-1-12">
+                                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="email" id="correo"
+                                            placeholder="Correo" required>
+                                    </div>
+                                </div>
+            
+                                <div class="mb-3">
+                                    <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                                    <div class="col-sm-1-12">
+                                        <input type="text" class="form-control" name="telefono" id="telefono"
+                                            placeholder="Telefono" required>
+                                    </div>
+                                </div>
+            
+                                <div class="form-check pb-3 col-12">
+                                    <input class="form-check-input" type="checkbox"  value=""  id="terminos" required>
+                                    <label class="form-check-label text-white" style="padding-right: 60%;" for="flexCheckDefault">
+                                        Acepto Terminos y condiciones
+                                    </label>
+                                </div>
+            
+                                <div class="mb-3 w-100">
+                                    <div class="col-sm-10 text-center w-100">
+                                        
+                                        <button type="submit" class="btn boton-confirmar">Confirmar</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/reservas.js"></script>
+
+
+
 
 
 <!--*************************************SECTION MAPA*******************************************-->
@@ -579,6 +789,8 @@
 
 
 
+
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -586,7 +798,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
-
+    <!--Librerias js creadas-->
+    <script type="text/javascript" src="js/carrito_de_compra.js"></script>
 </body>
 
 </html>

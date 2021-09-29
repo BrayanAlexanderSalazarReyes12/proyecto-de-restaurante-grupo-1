@@ -90,7 +90,7 @@ function total_de_cuentas_pedidos(){
         "<strong class='display-6'>$"+Intl.NumberFormat("es-US").format(localStorage.getItem("precio"))+"</strong>"+
     "</div>"+
     "<div class='text-center d-flex flex-column'>"+
-        "<button>Pagar ahora</button>"+
+        "<button data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-whatever='@mdo'>Pagar ahora</button>"+
         "<button>Continuar Comprando</button>"+
     "</div>"
 }

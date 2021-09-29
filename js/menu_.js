@@ -8,12 +8,12 @@ const postres   = document.querySelector("#postres")
 
 // Cantidad de productos en el localstoragen
 
-var count_productos_st = JSON.parse(localStorage.getItem("cart"))
+/* var count_productos_st = JSON.parse(localStorage.getItem("cart"))
 let numero_carrito = 0;
 count_productos_st.forEach(p => {
     numero_carrito = numero_carrito + p.count;
 });
-
+ */
 
 var list_ensaladas  = '';
 var list_sopas      = '';

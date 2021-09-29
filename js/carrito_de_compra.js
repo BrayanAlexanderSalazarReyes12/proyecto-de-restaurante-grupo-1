@@ -3,17 +3,34 @@
  * @author		Brayan alexander salazar reyes
  * @version 	0.1
  */
+<<<<<<< HEAD
 var modal = document.getElementById("carrito_de_compras");
 var list_prod = document.getElementById("productos");
+=======
+
+var modal = document.getElementById("carrito_de_compras");
+var list_prod = document.getElementById("productos")
+>>>>>>> 6896f30aa3b864efba8d0ab66f7f42f4a96de760
 var productos = ['Nombre 1','Nombre 2','Nombre 3','Nombre 4','Nombre 5','Nombre 6'];
 var listaP = '';
 var cerrar_carrito = document.getElementById("cerrar_carrito");
 var parentElement_resta = document.getElementById('resta');
 var parentElement_suma = document.getElementById('suma');
+<<<<<<< HEAD
 modal.onclick = function(){
     for(i=0; i<productos.length; i++){
         var producto = productos[i];
         
+=======
+var total_cuenta = document.getElementById("total_cuenta");
+
+/*precio total de comida*/
+var precio = 0;
+
+modal.onclick = function(){
+    for(i=0; i<productos.length; i++){
+        var producto = productos[i];
+>>>>>>> 6896f30aa3b864efba8d0ab66f7f42f4a96de760
         listaP +=
         `
         <div class="producto">
@@ -34,15 +51,27 @@ modal.onclick = function(){
                         <i class="far fa-trash-alt"></i>
                         <i class="fas fa-plus"></i>
                     </div>
+<<<<<<< HEAD
                 
+=======
+                    
+>>>>>>> 6896f30aa3b864efba8d0ab66f7f42f4a96de760
                 </div>
             </div>
         </div>
         
         `;
+<<<<<<< HEAD
     }
     list_prod.innerHTML = listaP;
    
+=======
+        precio = precio + 25000;
+    }
+    list_prod.innerHTML = listaP;
+    localStorage.setItem("precio",precio);
+
+>>>>>>> 6896f30aa3b864efba8d0ab66f7f42f4a96de760
     /** 
      * @guardar_operaciones_productos
     */
@@ -58,7 +87,11 @@ modal.onclick = function(){
     for(i=0; i<productos.length;i++){
         var cont = i+1;
         var g = document.createElement('script');
+<<<<<<< HEAD
         g.text = "var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"resta_"+cont+".onclick = function(){if(a_"+cont+">1){a_"+cont+" = a_"+cont+" - 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); }}"        
+=======
+        g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"resta_"+cont+".onclick = function(){if(a_"+cont+">1){a_"+cont+" = a_"+cont+" - 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); precio_nuevo = precio_nuevo - 25000; localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
+>>>>>>> 6896f30aa3b864efba8d0ab66f7f42f4a96de760
         parentElement_resta.insertBefore(g,theFirstChild);        
     }
     /** 
@@ -69,9 +102,29 @@ modal.onclick = function(){
         var cont = i+1;
         localStorage.setItem("cantidad_pedidos_"+cont,1);
         var g = document.createElement('script');
+<<<<<<< HEAD
         g.text = "var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"suma_"+cont+".onclick = function(){if(a_"+cont+"<30){a_"+cont+" = a_"+cont+" + 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+");}}"        
         parentElement_suma.insertBefore(g,theFirstChildSuma);        
     }
+=======
+        g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"suma_"+cont+".onclick = function(){if(a_"+cont+"<30){a_"+cont+" = a_"+cont+" + 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); precio_nuevo = precio_nuevo + 25000; localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
+        parentElement_suma.insertBefore(g,theFirstChildSuma);        
+    }
+    
+    total_de_cuentas_pedidos();
+}
+
+
+function total_de_cuentas_pedidos(){
+    total_cuenta.innerHTML = "<div class='d-flex justify-content-around'>"+
+        "<strong class='display-6'>Total</strong>"+ 
+        "<strong class='display-6'>$"+Intl.NumberFormat("es-US").format(localStorage.getItem("precio"))+"</strong>"+
+    "</div>"+
+    "<div class='text-center d-flex flex-column'>"+
+        "<button>Pagar ahora</button>"+
+        "<button>Continuar Comprando</button>"+
+    "</div>"
+>>>>>>> 6896f30aa3b864efba8d0ab66f7f42f4a96de760
 }
 
 cerrar_carrito.onclick = function(){
@@ -79,5 +132,9 @@ cerrar_carrito.onclick = function(){
     listaP = "";
     parentElement_resta.innerHTML = "<div id='hijo_resta'></div>";    
     parentElement_suma.innerHTML = "<div id='hijo_suma'></div>";
+<<<<<<< HEAD
+=======
+    precio = 0;
+>>>>>>> 6896f30aa3b864efba8d0ab66f7f42f4a96de760
 }
 

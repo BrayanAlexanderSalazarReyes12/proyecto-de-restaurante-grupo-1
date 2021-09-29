@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es">
-
 <head>
     <title>Restaurante</title>
     <!-- Required meta tags -->
@@ -18,6 +17,7 @@
     <link rel="stylesheet" href="css/mapa.css">
     <link rel="stylesheet" href="css/pagina_carrito.css">
     <link rel="stylesheet" href="css/icono_carrito.css">
+    <link rel="stylesheet" href="css/carga_pagina.css">
 
     <!-- ANIMATE -->
     <link
@@ -41,7 +41,9 @@
 </head>
 
 <body class="position-relative">
-
+    <div id="contenedor_carga">
+        <div id="carga"></div>
+    </div>
     <!-- HEADER -->
     <header>
         <nav class="navbar navbar-expand-lg">
@@ -122,15 +124,15 @@
                 <!-- Carrito -->
                 <section class="carrito row m-0">
                     <div class="carrito-total col-12 col-lg-7 d-flex justify-content-center align-items-center">
-                        <div class="btn-pagar d-flex flex-column justify-content-around">
-                            <div class="d-flex justify-content-around">
+                        <div id="total_cuenta" class="btn-pagar d-flex flex-column justify-content-around">
+                            <!--<div class="d-flex justify-content-around">
                                 <strong class="display-6">Total</strong> 
                                 <strong class="display-6">$75,000</strong>
                             </div>
                             <div class="text-center d-flex flex-column">
                                 <button>Pagar ahora</button>
                                 <button>Continuar Comprando</button>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="list-prod col-12 col-lg-5 d-flex justify-content-center align-items-center">
@@ -655,6 +657,7 @@
     </script>
     <!--Librerias js creadas-->
     <script type="text/javascript" src="js/carrito_de_compra.js"></script>
+    <script type="text/javascript" src="js/cerrar_menu_carga.js"></script>
 </body>
 
 </html>

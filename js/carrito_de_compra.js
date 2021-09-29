@@ -11,6 +11,11 @@ var listaP = '';
 var cerrar_carrito = document.getElementById("cerrar_carrito");
 var parentElement_resta = document.getElementById('resta');
 var parentElement_suma = document.getElementById('suma');
+var total_cuenta = document.getElementById("total_cuenta");
+
+/*precio total de comida*/
+var precio = 0;
+
 modal.onclick = function(){
     for(i=0; i<productos.length; i++){
         var producto = productos[i];
@@ -40,9 +45,11 @@ modal.onclick = function(){
         </div>
         
         `;
+        precio = precio + 25000;
     }
     list_prod.innerHTML = listaP;
-   
+    localStorage.setItem("precio",precio);
+
     /** 
      * @guardar_operaciones_productos
     */
@@ -58,7 +65,7 @@ modal.onclick = function(){
     for(i=0; i<productos.length;i++){
         var cont = i+1;
         var g = document.createElement('script');
-        g.text = "var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"resta_"+cont+".onclick = function(){if(a_"+cont+">1){a_"+cont+" = a_"+cont+" - 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); }}"        
+        g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"resta_"+cont+".onclick = function(){if(a_"+cont+">1){a_"+cont+" = a_"+cont+" - 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); precio_nuevo = precio_nuevo - 25000; localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
         parentElement_resta.insertBefore(g,theFirstChild);        
     }
     /** 
@@ -69,9 +76,23 @@ modal.onclick = function(){
         var cont = i+1;
         localStorage.setItem("cantidad_pedidos_"+cont,1);
         var g = document.createElement('script');
-        g.text = "var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"suma_"+cont+".onclick = function(){if(a_"+cont+"<30){a_"+cont+" = a_"+cont+" + 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+");}}"        
+        g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"suma_"+cont+".onclick = function(){if(a_"+cont+"<30){a_"+cont+" = a_"+cont+" + 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); precio_nuevo = precio_nuevo + 25000; localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
         parentElement_suma.insertBefore(g,theFirstChildSuma);        
     }
+    
+    total_de_cuentas_pedidos();
+}
+
+
+function total_de_cuentas_pedidos(){
+    total_cuenta.innerHTML = "<div class='d-flex justify-content-around'>"+
+        "<strong class='display-6'>Total</strong>"+ 
+        "<strong class='display-6'>$"+Intl.NumberFormat("es-US").format(localStorage.getItem("precio"))+"</strong>"+
+    "</div>"+
+    "<div class='text-center d-flex flex-column'>"+
+        "<button>Pagar ahora</button>"+
+        "<button>Continuar Comprando</button>"+
+    "</div>"
 }
 
 cerrar_carrito.onclick = function(){
@@ -79,6 +100,7 @@ cerrar_carrito.onclick = function(){
     listaP = "";
     parentElement_resta.innerHTML = "<div id='hijo_resta'></div>";    
     parentElement_suma.innerHTML = "<div id='hijo_suma'></div>";
+    precio = 0;
 }
 
 

@@ -1,0 +1,86 @@
+.modal-reservas{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal1{
+    width: 90%;
+    height: 90%;
+    background: var(--color-3);;
+    border-radius: 15px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: transform 1s;
+    transform: translateY(0%);
+    overflow-y: scroll;
+}
+
+
+.modal-close{
+   transform: translateY(-200%);
+}
+
+.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #c44a4a;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.modal-textos{
+    padding-top: 20px;
+    font-family:  var(--fuente);
+    color: rgb(48, 1, 1);
+}
+
+section.reservaciones div.card{
+    background: rgb(255, 221, 216);
+    border-radius: 10px;
+}
+
+section.reservaciones div.formulario-reservas{
+    width: 100%;
+    margin: 0 auto;
+    align-content: center;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.formulario-reservas button{
+    border-radius: 3px;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #007da7;
+}
+
+.formulario-reservas form{
+    margin-left: 18%;
+}
+
+
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+    color: black;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #007da7;
+    
+}
+
+

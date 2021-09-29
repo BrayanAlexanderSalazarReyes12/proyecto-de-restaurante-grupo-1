@@ -401,14 +401,81 @@
         </div>
     
         <div class="partes_menu">
-            <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item" id="menu_1"><a href="menus/ensaladas.html" class="nav-link">Ensaladas</a></li>
-                <li class="nav-item" id="menu_2"><a href="menus/sopas.html" class="nav-link">Sopas</a></li>
-                <li class="nav-item" id="menu_3"><a href="menus/aperitivos.html" class="nav-link">Aperitivos</a></li>
-                <li class="nav-item" id="menu_4"><a href="menus/bebida.html" class="nav-link">Bebida</a></li>
-                <li class="nav-item" id="menu_5"><a href="menus/postres.html" class="nav-link">Postres</a></li>
-            </ul>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist" style="padding-left: 3rem;">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Ensaladas</button>
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Sopas</button>
+                  <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Aperitivos</button>
+                  <button class="nav-link" id="nav-bebidas-tab" data-bs-toggle="tab" data-bs-target="#nav-bebidas" type="button" role="tab" aria-controls="nav-bebidas" aria-selected="false">Bebidas</button>
+                  <button class="nav-link" id="nav-postres-tab" data-bs-toggle="tab" data-bs-target="#nav-postres" type="button" role="tab" aria-controls="nav-postres" aria-selected="false">Postres</button>
+                </div>
+            </nav>
+            <div class="tab-content p-5" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="menu_muestra_1">
+                        <div id="ensaladas" class='row row-cols-1 row-cols-md-3 g-4'>
+                            <!-- Lista dde ensaladas -->
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="menu_muestra_1" id="menu_muestra_1">
+                        <div id="sopas" class='row row-cols-1 row-cols-md-3 g-4'>
+                            <!-- Lista de sopas -->
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="menu_muestra_1" id="menu_muestra_1">
+                        <div id="aperitivos" class='row row-cols-1 row-cols-md-3 g-4'>
+                            <!-- Lista de aperitivos -->
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-bebidas" role="tabpanel" aria-labelledby="nav-bebidas-tab">
+                    <div class="menu_muestra_1" id="menu_muestra_1">
+                        <div id="bebidas" class='row row-cols-1 row-cols-md-3 g-4'>
+                            <!-- Lista de bebidas -->
+                            bebidas
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-postres" role="tabpanel" aria-labelledby="nav-postres-tab">
+                    <div class="menu_muestra_1" id="menu_muestra_1">
+                        <div id="postres" class='row row-cols-1 row-cols-md-3 g-4'>
+                            <!-- Lista de postres -->
+                            <h1>Postres</h1>
+                        </div>
+                    </div>
+                </div>
+              </div>
         </div>
+        <!-- MODAL PARA MOSTRAR DETALLES DEL PRODUCTO ESPECIFICO -->
+        <div class='modal' id='exampleModalProducto' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                  <input id='id_prod' type="hidden" value="">
+                <div class='modal-header'>
+                  <h5 id="modal_titulo" class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
+                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body'>
+                  <img id="modal_img" src='../img/ensaladas/en_1.webp' alt='...' class='card-img-top '>
+                  <p id="modal_descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
+                </div>
+                <div class='modal-footer d-flex justify-content-between'>
+                    <p id='modal_precio'></p>
+                    <div class='cantidad_producto d-flex justify-content-between'>
+                        <i id="mas" class="fas fa-plus"></i>
+                        <small id="count_prod">1</small>
+                        <i id="menos" class="fas fa-minus"></i>
+                    </div>
+                  <button id="add_cart" type='button' class='btn btn-primary'>Add Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <a href="carta/menu.pdf" class='btn btn-primary' href='#' role='button'><i class="fa fa-download"></i>DESCARGAR MENU</a>
     </div>
     <!-- FIN MENU -->
@@ -799,7 +866,7 @@
 
 
 
-
+    <script src="js/menu_.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">

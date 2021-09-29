@@ -40,3 +40,18 @@ button{
 	padding: 4px 8px 4px 3px;
 	border-radius: 0 45px 45px 0;
 }
+
+
+.cantidad_producto{
+	width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+.cantidad_producto i{
+	cursor: pointer;
+}

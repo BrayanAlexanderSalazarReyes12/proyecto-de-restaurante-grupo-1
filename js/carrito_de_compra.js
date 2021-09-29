@@ -81,3 +81,39 @@ cerrar_carrito.onclick = function(){
     parentElement_suma.innerHTML = "<div id='hijo_suma'></div>";
 }
 
+
+
+
+/* 
+* ENVIAR PEDIDO AL CORREO DEL USUARIO CON LA INFORMACION DEL PEDIDO
+*/
+
+const finalizar_compra = document.querySelector("#finalizar_compra")
+
+finalizar_compra.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nombre_ = document.querySelector("#compra_nombre") 
+
+    console.log("Homa")
+    let correo_data = {
+        from: document.querySelector("#compra_email").value,
+        subject: `${nombre_.value} Restaurantes Online Te hace entrega de tu factura`,
+        body: 'Lista de porductos consumidos'
+    }
+
+    enviar(correo_data)
+})
+
+const enviar = (data) => {
+    Email.send({
+        Host     : "smtp.elasticemail.com",
+        Username : "restauranteOnline",
+        Password : "Qwertyuiop2021",
+        To       : 'restauranteOnline2021@outlook.es',
+        From     : 'vasquez092021@outlook.es',
+        Subject  : data.subject,
+        Body     : data.body
+    }).then(
+        message => console.log(message)
+    );
+}

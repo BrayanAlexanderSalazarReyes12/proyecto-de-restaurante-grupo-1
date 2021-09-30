@@ -50,6 +50,62 @@ const data_ensaladas = [
         img        : 'img/ensaladas/en_1.webp',
         id         : 'Ensalada_4'
     },
+    {
+        titulo     : 'Ensalada poke de atún y algas con aguacate',
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.',
+        precio     : 20000,
+        img        : 'img/ensaladas/en_1.webp',
+        id         : 'Ensalada_5'
+    },
+    {
+        titulo     : 'Ensalada poke de atún y algas con aguacate',
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.',
+        precio     : 20000,
+        img        : 'img/ensaladas/en_1.webp',
+        id         : 'Ensalada_6'
+    },
+    {
+        titulo     : 'Ensalada poke de atún y algas con aguacate',
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.',
+        precio     : 20000,
+        img        : 'img/ensaladas/en_1.webp',
+        id         : 'Ensalada_7'
+    },
+    {
+        titulo     : 'Ensalada poke de atún y algas con aguacate',
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.',
+        precio     : 20000,
+        img        : 'img/ensaladas/en_1.webp',
+        id         : 'Ensalada_8'
+    },
+    {
+        titulo     : 'Ensalada poke de atún y algas con aguacate',
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.',
+        precio     : 20000,
+        img        : 'img/ensaladas/en_1.webp',
+        id         : 'Ensalada_9'
+    },
+    {
+        titulo     : 'Ensalada poke de atún y algas con aguacate',
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.',
+        precio     : 20000,
+        img        : 'img/ensaladas/en_1.webp',
+        id         : 'Ensalada_10'
+    },
+    {
+        titulo     : 'Ensalada poke de atún y algas con aguacate',
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.',
+        precio     : 20000,
+        img        : 'img/ensaladas/en_1.webp',
+        id         : 'Ensalada_11'
+    },
+    {
+        titulo     : 'Ensalada poke de atún y algas con aguacate',
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde facere dolore sit blanditiis quia dignissimos officia sed dicta amet doloribus tempore reiciendis inventore quaerat odit, fugiat minus ipsa suscipit.',
+        precio     : 20000,
+        img        : 'img/ensaladas/en_1.webp',
+        id         : 'Ensalada_12'
+    },
 ];
 
 const data_sopas = [
@@ -415,7 +471,7 @@ const menu_ensaladas = (data) => {
                     <div class='card-body'>
                         <h5 class='card-title'>${item.titulo}</h5>
                         <p class='card-text'>${item.descripcion}</p>
-                        <p class='card-text'>${item.precio}</p>
+                        <p class='card-text'>$ ${item.precio}</p>
                         <button onclick="modal_data(${index},1)" class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
                     </div>
                 </img>
@@ -614,7 +670,7 @@ add_cart.addEventListener("click", () =>{
     let producto = {
         titulo     : modal_titulo.innerHTML,
         descripcion: modal_descripcion.innerHTML,
-        img        : modal_img.innerHTML,
+        img        : modal_img.src,
         precio     : parseInt(modal_precio.innerHTML,10),
         count      : parseInt(count_prod.innerHTML,10),
         id         : id_prod.value
@@ -624,6 +680,7 @@ add_cart.addEventListener("click", () =>{
     if(localS === null){
         productos.push(producto)
         localStorage.setItem("cart",JSON.stringify(productos))
+        location.reload(true);
     }else{
         /* Verificar si el producto existe en el localstorage para evitar guardar duplicas*/
         const cart_localstorage = JSON.parse(localS); // Convierto de string a JSON
@@ -635,12 +692,13 @@ add_cart.addEventListener("click", () =>{
             add_storag.push(...existe_) // Agregamos el producto actualizado
             productos.push(...add_storag) // Agrego al arreglo todos los datos menos el producto duplicado
             localStorage.setItem("cart",JSON.stringify(productos))
+            location.reload(true);
         }else{
             // Si no encuentra ningun producto duplicado Lo agrego al arreglo y actualizo el storage
             productos.push(...cart_localstorage)
             productos.push(producto)
             localStorage.setItem("cart",JSON.stringify(productos))
-
+            location.reload(true);
         }
         
     }

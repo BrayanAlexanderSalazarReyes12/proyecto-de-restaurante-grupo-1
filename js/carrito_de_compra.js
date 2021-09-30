@@ -16,71 +16,100 @@ var total_cuenta = document.getElementById("total_cuenta");
 /*precio total de comida*/
 var precio = 0;
 
+/**
+ * @cargar_Datos_de_productos
+ */
+ 
+var datos_de_producto_compra = JSON.parse(localStorage.getItem("cart"));
+
 modal.onclick = function(){
-    for(i=0; i<productos.length; i++){
-        var producto = productos[i];
+    var verificar = localStorage.getItem("cart");
+    if(verificar == null)
+    {
+        total_cuenta.innerHTML = "<div class='d-flex justify-content-around'>"+
+        "<img class='col-5' src='http://127.0.0.1:5500/proyecto-de-restaurante-grupo-1/img/carrito/Carrito_de_compra_vacio.png' alt=''>"+
+        "</div>"
         listaP +=
-        `
-        <div class="producto">
-            <img class="col-5" src="img/carrito/img1.jpg" alt="">
-            <div class="descripcion col-7 position-relative">
-                <div class="d-flex">
-                    <strong class="col-6 titulo col-4">${producto}</strong>
-                    <strong class="col-6 precio text-end">$25,000</strong>
-                </div>
-                <p class="text-break text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur placeat labore inventore at enim doloribus rem, quasi, dolorem iste sit veritatis quibusdam beatae laboriosam in itaque! Ducimus, perferendis doloribus.</p>
-                <div class="w-100 d-flex justify-content-around position-absolute" style="bottom: 10px;">
-                    <div class="add_delet">
-                        <small id="resta_${i+1}">-</small>
-                        <small id="cantidad_${i+1}">1</small>
-                        <small id="suma_${i+1}">+</small>
+            `
+            <div class="producto">
+            "<img class='col-5' src='http://127.0.0.1:5500/proyecto-de-restaurante-grupo-1/img/carrito/carro-vacio.png' alt=''>"
+            </div>
+            
+            `;
+            list_prod.innerHTML = listaP;
+    }else{
+        var cantidad_de_productos_pedidos = Array(datos_de_producto_compra.length);
+        for(i=0; i<datos_de_producto_compra.length; i++){
+            if(localStorage.getItem("cantidad_pedidos_"+i)==null){
+                localStorage.setItem("cantidad_pedidos_"+i,datos_de_producto_compra[i].count);
+                cantidad_de_productos_pedidos[i]=datos_de_producto_compra[i].count;
+            }else{
+                cantidad_de_productos_pedidos[i]=localStorage.getItem("cantidad_pedidos_"+i);
+            }
+            listaP +=
+            `
+            <div class="producto">
+                <img class="col-5" src="${datos_de_producto_compra[i].img}" alt="">
+                <div class="descripcion col-7 position-relative">
+                    <div class="d-flex">
+                        <strong id="cambiar_tamaño"class="col-6 titulo col-4">${datos_de_producto_compra[i].titulo}</strong>
+                        <strong class="col-6 precio text-end">$${datos_de_producto_compra[i].precio}</strong>
                     </div>
-                    <div class="iconos">
-                        <i class="far fa-trash-alt"></i>
-                        <i class="fas fa-plus"></i>
+                    <p class="text-break text-wrap">${datos_de_producto_compra[i].descripcion}</p>
+                    <div class="w-100 d-flex justify-content-around position-absolute" style="bottom: 10px;">
+                        <div class="add_delet">
+                            <small id="resta_${i+1}">-</small>
+                            <small id="cantidad_${i+1}">${cantidad_de_productos_pedidos[i]}</small>
+                            <small id="suma_${i+1}">+</small>
+                        </div>
+                        <div class="iconos">
+                            <i class="far fa-trash-alt"></i>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        
                     </div>
-                    
                 </div>
             </div>
-        </div>
-        
-        `;
-        precio = precio + 25000;
-    }
-    list_prod.innerHTML = listaP;
-    localStorage.setItem("precio",precio);
-
-    /** 
-     * @guardar_operaciones_productos
-    */
-    var cantidad_productos_resta = new Array(productos.length);
-    for(i=0; i<productos.length;i++){
-        var cont = i+1;
-        cantidad_productos_resta[i] = document.getElementById("resta_"+cont);
-    }
-    /** 
-     * @realizar_operaciones_productos_resta
-    */
-    var theFirstChild = parentElement_resta.firstChild;
-    for(i=0; i<productos.length;i++){
-        var cont = i+1;
-        var g = document.createElement('script');
-        g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"resta_"+cont+".onclick = function(){if(a_"+cont+">1){a_"+cont+" = a_"+cont+" - 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); precio_nuevo = precio_nuevo - 25000; localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
-        parentElement_resta.insertBefore(g,theFirstChild);        
-    }
-    /** 
-     * @realizar_operaciones_productos_suma
-    */
-    var theFirstChildSuma = parentElement_suma.firstChild;
-    for(i=0; i<productos.length;i++){
-        var cont = i+1;
-        localStorage.setItem("cantidad_pedidos_"+cont,1);
-        var g = document.createElement('script');
-        g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"suma_"+cont+".onclick = function(){if(a_"+cont+"<30){a_"+cont+" = a_"+cont+" + 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); precio_nuevo = precio_nuevo + 25000; localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
-        parentElement_suma.insertBefore(g,theFirstChildSuma);        
-    }
+            
+            `;
+            precio = precio + (datos_de_producto_compra[i].precio*cantidad_de_productos_pedidos[i]);
+        }
     
-    total_de_cuentas_pedidos();
+        list_prod.innerHTML = listaP;
+        localStorage.setItem("precio",precio);
+    
+        /** 
+         * @guardar_operaciones_productos
+        */
+        var cantidad_productos_resta = new Array(productos.length);
+        for(i=0; i<productos.length;i++){
+            var cont = i+1;
+            cantidad_productos_resta[i] = document.getElementById("resta_"+cont);
+        }
+        /** 
+         * @realizar_operaciones_productos_resta
+        */
+        var theFirstChild = parentElement_resta.firstChild;
+        for(i=0; i<datos_de_producto_compra.length;i++){
+            var cont = i+1;
+            var g = document.createElement('script');
+            g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"resta_"+cont+".onclick = function(){if(a_"+cont+">1){a_"+cont+" = a_"+cont+" - 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); precio_nuevo = precio_nuevo - parseInt(datos_de_producto_compra["+i+"].precio); localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
+            parentElement_resta.insertBefore(g,theFirstChild);        
+        }
+        /** 
+         * @realizar_operaciones_productos_suma
+        */
+        var theFirstChildSuma = parentElement_suma.firstChild;
+        for(i=0; i<datos_de_producto_compra.length;i++){
+            var cont = i+1;
+            
+            var g = document.createElement('script');
+            g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+i+" = parseInt(localStorage.getItem('cantidad_pedidos_"+i+"'));"+"suma_"+cont+".onclick = function(){if(a_"+i+"<30){a_"+i+" = a_"+i+" + 1; cantidad_"+cont+".innerHTML=a_"+i+";localStorage.setItem('cantidad_pedidos_"+i+"',a_"+i+"); precio_nuevo = precio_nuevo + parseInt(datos_de_producto_compra["+i+"].precio); localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
+            parentElement_suma.insertBefore(g,theFirstChildSuma);        
+        }
+        
+        total_de_cuentas_pedidos();
+    }
 }
 
 
@@ -128,14 +157,12 @@ finalizar_compra.addEventListener("submit", (e) => {
 
 const enviar = (data) => {
     Email.send({
-        Host     : "smtp.elasticemail.com",
-        Username : "restauranteOnline",
-        Password : "Qwertyuiop2021",
-        To       : 'restauranteOnline2021@outlook.es',
-        From     : 'vasquez092021@outlook.es',
+        Host: "smtp.gmail.com",
+        Username: 'restauranteonline20211@gmail.com',
+        Password: "Restaurante12",
+        To: 'restauranteonline20211@gmail.com',
+        From: 'restauranteonline20211@gmail.com',
         Subject  : data.subject,
         Body     : data.body
-    }).then(
-        message => console.log(message)
-    );
+    }).then((message)=>alert("mensaje enviado con exito"));
 }

@@ -77,3 +77,5 @@ btncena.addEventListener("click",function(){
     respuesta="Evento Cena Con Amigos";
     document.getElementById("respuesta").innerHTML=respuesta;
 })
+
+

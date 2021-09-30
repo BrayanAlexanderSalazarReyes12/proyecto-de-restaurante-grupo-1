@@ -135,26 +135,57 @@ cerrar_carrito.onclick = function(){
 
 
 
+
+
+
+
+
 /* 
+* *******************************************************************+
 * ENVIAR PEDIDO AL CORREO DEL USUARIO CON LA INFORMACION DEL PEDIDO
+* *******************************************************************+
 */
 
 const finalizar_compra = document.querySelector("#finalizar_compra")
-
+const btn_disable = document.querySelector("#btn_disable");
+const modal_body = document.querySelector("#modal_body");
+const loading = document.querySelector("#loading");
 finalizar_compra.addEventListener("submit", (e) => {
     e.preventDefault();
-    const nombre_ = document.querySelector("#compra_nombre") 
-
-    console.log("Homa")
-    let correo_data = {
-        from: document.querySelector("#compra_email").value,
-        subject: `${nombre_.value} Restaurantes Online Te hace entrega de tu factura`,
-        body: 'Lista de porductos consumidos'
+    let len = JSON.parse(localStorage.getItem("cart")) 
+    console.log(len)
+    if(len === null){
+        swal("Error !!", "No tienes productos en el carrito de compra, localstorage vacio", "error");
+        return 
     }
-
-    enviar(correo_data)
+    btn_disable.disabled = true;
+    btn_disable.style.opacity = .4;
+    modal_body.style.opacity = .4;
+    loading.classList.toggle('d-none');
+    const factura_ = factura_productos();
+    const nombre_ = document.querySelector("#compra_nombre").value
+    const email_  = document.querySelector("#compra_email").value 
+    Email.send({
+        Host    : "smtp-mail.outlook.com",
+        Username: "restaurantonline_@outlook.com",
+        Password: "Qwertyuiop2021",
+        From    : "restaurantonline_@outlook.com",
+        To      : email_,
+        Subject : nombre_,
+        Body    : factura_,
+    }).then(function (message) {
+        console.log(message);
+        swal("Compra Finalizada!", "Revisar bandeja de entrada, papelera o spam", "success");
+        document.querySelector("#compra_nombre").value = ''
+        document.querySelector("#compra_email").value = ''
+        btn_disable.disabled = false;
+        btn_disable.style.opacity = 1;
+        modal_body.style.opacity = 1;
+        loading.classList.toggle('d-none');
+    });
 })
 
+<<<<<<< HEAD
 const enviar = (data) => {
     Email.send({
         Host: "smtp.gmail.com",
@@ -165,4 +196,56 @@ const enviar = (data) => {
         Subject  : data.subject,
         Body     : data.body
     }).then((message)=>alert("mensaje enviado con exito"));
+=======
+
+
+/* 
+* Mostrar factura de productos a comprar
+*/
+
+
+const factura_productos = () => {
+    let lista_prod = '';
+    let suma_total = 0;
+    let productos_storage = JSON.parse(localStorage.getItem("cart")) 
+    for(i = 0; i < productos_storage.length; i++) {
+        const producto = productos_storage[i];
+        let total = Number(producto.count * producto.precio) 
+        suma_total += total;
+        lista_prod += `
+            <tr style='border: 3px solid #d95204'>
+                <th style='text-align:center;border: 3px solid #d95204'>${i}</th>
+                <td style='text-align:center;border: 3px solid #d95204'>${producto.titulo}</td>
+                <td style='text-align:center;border: 3px solid #d95204'>${producto.count}</td>
+                <td style='text-align:center;border: 3px solid #d95204'>${producto.precio}</td>
+                <td style='text-align:center;border: 3px solid #d95204'>${total}</td>
+            </tr>
+        `
+    }
+
+    let factura = `
+    <h2 style='width: 100%; border: 2px solid #d95204; text-align: center;'>Restaurante online</h2><br>
+    <table style='width:100%; border: 2px solid #d95204;'>
+        <thead>
+            <tr style='border: 2px solid #d95204'>
+                <th style='border: 3px solid #d95204'>Id</th>
+                <th style='border: 3px solid #d95204'>Nombre</th>
+                <th style='border: 3px solid #d95204'>Cantidad</th>
+                <th style='border: 3px solid #d95204'>Precio</th>
+                <th style='border: 3px solid #d95204'>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${lista_prod}
+            <tr  style='border: 2px solid #d95204'>
+            	<th colspan="4" style='text-align:center;border: 3px solid #d95204'>Suma Total</th>
+                <th  style='text-align:center;border: 3px solid #d95204'>${suma_total}</th>
+            </tr>
+        </tbody>
+    </table>
+    `;
+
+    return factura
+>>>>>>> efffa1241905faaee469db5e483d64af135290c9
 }
+

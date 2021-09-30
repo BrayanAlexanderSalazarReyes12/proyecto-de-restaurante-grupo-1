@@ -31,7 +31,6 @@ cerrar.addEventListener("click",function(){
 })
 
 window.addEventListener("click",function(e){
-    console.log(e.target);
     if(e.target == modalC){
         modal1.classList.toggle("modal-close");
         
@@ -77,3 +76,5 @@ btncena.addEventListener("click",function(){
     respuesta="Evento Cena Con Amigos";
     document.getElementById("respuesta").innerHTML=respuesta;
 })
+
+

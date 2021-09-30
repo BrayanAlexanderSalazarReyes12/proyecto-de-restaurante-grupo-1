@@ -8,12 +8,28 @@ const postres   = document.querySelector("#postres")
 
 // Cantidad de productos en el localstoragen
 
-/* var count_productos_st = JSON.parse(localStorage.getItem("cart"))
-let numero_carrito = 0;
-count_productos_st.forEach(p => {
-    numero_carrito = numero_carrito + p.count;
-});
- */
+var count_productos_st = JSON.parse(localStorage.getItem("cart"))
+var numero_carrito = 0;
+
+const aumentar_icon_carrito = (carrito) => {
+    
+    if(carrito != null || carrito.length === 0){
+        let num_ = 0
+        if (carrito.length > 0){
+            carrito.forEach(p => {
+                num_ = num_ + p.count;
+            });
+            document.querySelector("#num_cart")
+            .innerHTML = num_;
+        }
+    }else{
+        document.querySelector("#num_cart").classList.add("d-none")
+    }
+    
+}
+
+aumentar_icon_carrito(count_productos_st);
+
 
 var list_ensaladas  = '';
 var list_sopas      = '';
@@ -643,6 +659,8 @@ add_cart.addEventListener("click", () =>{
 
         }
         
+        let cart = JSON.parse(localStorage.getItem("cart"))
+        aumentar_icon_carrito(cart)
     }
 
 

@@ -709,9 +709,22 @@
                     <div class="formulario-reservas col-8">
                             
                             <form class="col-8 justify-content-center" id="form-resevas" action="https://formsubmit.co/jhonierg20@gmail.com" method="POST" >
-                                <div class=" tipo-reserva" id="respuesta" name="reserva" >
+                                <input type="hidden" name="_subject" value="Nueva Reserva!" >
+                                <input type="hidden" name="_autoresponse" value="Reserva Confirmada!!">
+                                <input type="hidden" name="_template" value="table">
                                 
+                                    <!--Error en enviar el tipo de reserva-->
+                                <div class="mb-3">
+                                    <label for="inputName" name="Reserva" id="respuesta"></label>
+                                    <div class=" tipo-reserva" >
+                                        
+                                        <input type="text" name="Reserva" id="respuesta">
+                                        
+                                    <!----> 
+                                    <!----> 
+                                    </div>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                                     <div class="col-sm-1-12 row-cols-md-1">
@@ -723,7 +736,7 @@
                                 <div class="mb-3">
                                     <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                                     <div class="col-sm-1-12">
-                                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="email" id="correo"
+                                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="email" id="email"
                                             placeholder="Correo" required>
                                     </div>
                                 </div>
@@ -760,6 +773,8 @@
         </div>
     </div>
 </section>
+
+
 
 <script src="js/reservas.js"></script>
 

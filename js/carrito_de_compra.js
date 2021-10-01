@@ -11,6 +11,7 @@ var listaP = '';
 var cerrar_carrito = document.getElementById("cerrar_carrito");
 var parentElement_resta = document.getElementById('resta');
 var parentElement_suma = document.getElementById('suma');
+var parentElement_eliminar = document.getElementById("eliminar");
 var total_cuenta = document.getElementById("total_cuenta");
 
 /*precio total de comida*/
@@ -53,7 +54,7 @@ modal.onclick = function(){
             }
             listaP +=
             `
-            <div class="producto">
+            <div class="producto" id="producto_${i}">
                 <img class="col-5" src="${datos_de_producto_compra[i].img}" alt="">
                 <div class="descripcion col-7 position-relative">
                     <div class="d-flex">
@@ -68,8 +69,7 @@ modal.onclick = function(){
                             <small id="suma_${i+1}">+</small>
                         </div>
                         <div class="iconos">
-                            <i class="far fa-trash-alt"></i>
-                            <i class="fas fa-plus"></i>
+                            <i class="far fa-trash-alt" id="eliminar_${i+1}"></i>
                         </div>
                         
                     </div>
@@ -105,17 +105,27 @@ modal.onclick = function(){
          * @realizar_operaciones_productos_suma
         */
         var theFirstChildSuma = parentElement_suma.firstChild;
-        var cantidades_de_productos = 0;
+        
         for(i=0; i<datos_de_producto_compra.length;i++){
             var cont = i+1;
             
             var g = document.createElement('script');
             g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+i+" = parseInt(localStorage.getItem('cantidad_pedidos_"+i+"'));"+"suma_"+cont+".onclick = function(){if(a_"+i+"<30){a_"+i+" = a_"+i+" + 1; cantidad_"+cont+".innerHTML=a_"+i+";localStorage.setItem('cantidad_pedidos_"+i+"',a_"+i+"); precio_nuevo = precio_nuevo + parseInt(datos_de_producto_compra["+i+"].precio); localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
             parentElement_suma.insertBefore(g,theFirstChildSuma);
-            cantidades_de_productos = cantidades_de_productos + parseInt(localStorage.getItem('cantidad_pedidos_'+i));   
-            //console.log(cantidades_de_productos);
+            
         }
-        localStorage.setItem("cantidad_de_producto_total",cantidades_de_productos);
+        /**
+         * @eliminar_producto
+         */
+        var theFirstChildEliminar = parentElement_eliminar.firstChild;
+        for(i=0; i<datos_de_producto_compra.length; i++){
+            var cont = i+1;
+            
+            var g = document.createElement('script');
+            g.text = "eliminar_"+cont+".onclick = function(){producto_"+i+".remove();datos_de_producto_compra.splice(datos_de_producto_compra["+i+"].id, 1);var guardar = JSON.stringify(datos_de_producto_compra);localStorage.setItem('cart',guardar);localStorage.removeItem('cantidad_pedidos_"+i+"');actualizar_carrito();location.reload(true);}"        
+            parentElement_eliminar.insertBefore(g,theFirstChildEliminar);
+        }
+
         total_de_cuentas_pedidos(cantidades_de_productos);
     }
 }
@@ -132,12 +142,28 @@ function total_de_cuentas_pedidos(){
     "</div>"
 }
 
+/**
+ * @funcionactualizar_carrito_de_Compra
+ */
+ var cantidades_de_productos = 0;
+function actualizar_carrito(){
+    for(i=0; i<datos_de_producto_compra.length;i++)
+    {
+        cantidades_de_productos = cantidades_de_productos + parseInt(localStorage.getItem('cantidad_pedidos_'+i));
+    }
+    //console.log(cantidades_de_productos);
+    localStorage.setItem("cantidad_de_producto_total",cantidades_de_productos);
+    //lert("hola mundo");
+}
+
 cerrar_carrito.onclick = function(){
     list_prod.innerHTML = "";
     listaP = "";
     parentElement_resta.innerHTML = "<div id='hijo_resta'></div>";    
     parentElement_suma.innerHTML = "<div id='hijo_suma'></div>";
+    parentElement_eliminar.innerHTML = "<div id='hijo_eliminar'></div>";
     precio = 0;
+    actualizar_carrito();
     location.reload(true);
 }
 
@@ -191,6 +217,8 @@ finalizar_compra.addEventListener("submit", (e) => {
         btn_disable.style.opacity = 1;
         modal_body.style.opacity = 1;
         loading.classList.toggle('d-none');
+        localStorage.clear();
+        location.reload(true);
     });
 })
 

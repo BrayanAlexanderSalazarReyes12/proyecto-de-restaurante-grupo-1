@@ -20,7 +20,7 @@ const aumentar_icon_carrito = (carrito) => {
                 if(localStorage.getItem("cantidad_pedidos_"+i)==null)
                 {
                     num_ = num_ + count_productos_st[i].count;
-                    console.log(num_);
+                    //console.log(num_);
                 }else{
                     num_ = parseInt(localStorage.getItem("cantidad_de_producto_total"));
                     //console.log(num_);

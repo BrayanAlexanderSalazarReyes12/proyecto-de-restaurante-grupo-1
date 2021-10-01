@@ -13,7 +13,7 @@ var numero_carrito = 0;
 
 const aumentar_icon_carrito = (carrito) => {
     
-    if(carrito != null || carrito.length === 0){
+    if(carrito != null){
         let num_ = 0
         if (carrito.length > 0){
             carrito.forEach(p => {

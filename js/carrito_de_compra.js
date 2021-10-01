@@ -21,6 +21,11 @@ var precio = 0;
  */
  
 var datos_de_producto_compra = JSON.parse(localStorage.getItem("cart"));
+var verificar_1 = localStorage.getItem("cart");
+    if(verificar_1 != null)
+    {
+        var cantidad_de_productos_pedidos = Array(datos_de_producto_compra.length);
+    }
 
 modal.onclick = function(){
     var verificar = localStorage.getItem("cart");
@@ -38,7 +43,7 @@ modal.onclick = function(){
             `;
             list_prod.innerHTML = listaP;
     }else{
-        var cantidad_de_productos_pedidos = Array(datos_de_producto_compra.length);
+        
         for(i=0; i<datos_de_producto_compra.length; i++){
             if(localStorage.getItem("cantidad_pedidos_"+i)==null){
                 localStorage.setItem("cantidad_pedidos_"+i,datos_de_producto_compra[i].count);
@@ -93,7 +98,7 @@ modal.onclick = function(){
         for(i=0; i<datos_de_producto_compra.length;i++){
             var cont = i+1;
             var g = document.createElement('script');
-            g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+cont+" = parseInt(localStorage.getItem('cantidad_pedidos_"+cont+"'));"+"resta_"+cont+".onclick = function(){if(a_"+cont+">1){a_"+cont+" = a_"+cont+" - 1; cantidad_"+cont+".innerHTML=a_"+cont+";localStorage.setItem('cantidad_pedidos_"+cont+"',a_"+cont+"); precio_nuevo = precio_nuevo - parseInt(datos_de_producto_compra["+i+"].precio); localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
+            g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+i+" = parseInt(localStorage.getItem('cantidad_pedidos_"+i+"'));"+"resta_"+cont+".onclick = function(){if(a_"+i+">1){a_"+i+" = a_"+i+" - 1; cantidad_"+cont+".innerHTML=a_"+i+";localStorage.setItem('cantidad_pedidos_"+i+"',a_"+i+"); precio_nuevo = precio_nuevo - parseInt(datos_de_producto_compra["+i+"].precio); localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
             parentElement_resta.insertBefore(g,theFirstChild);        
         }
         /** 
@@ -106,8 +111,8 @@ modal.onclick = function(){
             var g = document.createElement('script');
             g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+i+" = parseInt(localStorage.getItem('cantidad_pedidos_"+i+"'));"+"suma_"+cont+".onclick = function(){if(a_"+i+"<30){a_"+i+" = a_"+i+" + 1; cantidad_"+cont+".innerHTML=a_"+i+";localStorage.setItem('cantidad_pedidos_"+i+"',a_"+i+"); precio_nuevo = precio_nuevo + parseInt(datos_de_producto_compra["+i+"].precio); localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
             parentElement_suma.insertBefore(g,theFirstChildSuma);        
+            
         }
-        
         total_de_cuentas_pedidos();
     }
 }
@@ -130,6 +135,7 @@ cerrar_carrito.onclick = function(){
     parentElement_resta.innerHTML = "<div id='hijo_resta'></div>";    
     parentElement_suma.innerHTML = "<div id='hijo_suma'></div>";
     precio = 0;
+    location.reload(true);
 }
 
 
@@ -204,7 +210,7 @@ const factura_productos = () => {
             <tr style='border: 3px solid #d95204'>
                 <th style='text-align:center;border: 3px solid #d95204'>${i}</th>
                 <td style='text-align:center;border: 3px solid #d95204'>${producto.titulo}</td>
-                <td style='text-align:center;border: 3px solid #d95204'>${producto.count}</td>
+                <td style='text-align:center;border: 3px solid #d95204'>${cantidad_de_productos_pedidos[i]}</td>
                 <td style='text-align:center;border: 3px solid #d95204'>${producto.precio}</td>
                 <td style='text-align:center;border: 3px solid #d95204'>${total}</td>
             </tr>

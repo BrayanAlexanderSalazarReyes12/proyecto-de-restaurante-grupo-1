@@ -17,7 +17,16 @@ const aumentar_icon_carrito = (carrito) => {
         let num_ = 0
         if (carrito.length > 0){
             carrito.forEach(p => {
-                num_ = num_ + p.count;
+                for(i=0; i<count_productos_st.length; i++){
+                    if(localStorage.getItem("cantidad_pedidos_"+i)==null)
+                    {
+                        num_ = num_ + p.count;
+                    }else{
+                    
+                        num_ = num_ + parseInt(localStorage.getItem("cantidad_pedidos_"+i));
+                    
+                    }
+                }
             });
             document.querySelector("#num_cart")
             .innerHTML = num_;

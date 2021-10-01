@@ -122,7 +122,7 @@ modal.onclick = function(){
             var cont = i+1;
             
             var g = document.createElement('script');
-            g.text = "eliminar_"+cont+".onclick = function(){producto_"+i+".remove();datos_de_producto_compra.splice(datos_de_producto_compra["+i+"].id, 1);var guardar = JSON.stringify(datos_de_producto_compra);localStorage.setItem('cart',guardar);localStorage.removeItem('cantidad_pedidos_"+i+"');location.reload(true);}"        
+            g.text = "eliminar_"+cont+".onclick = function(){producto_"+i+".remove();datos_de_producto_compra.splice(datos_de_producto_compra["+i+"].id, 1);var guardar = JSON.stringify(datos_de_producto_compra);localStorage.setItem('cart',guardar);localStorage.removeItem('cantidad_pedidos_"+i+"');actualizar_carrito();location.reload(true);}"        
             parentElement_eliminar.insertBefore(g,theFirstChildEliminar);
         }
 

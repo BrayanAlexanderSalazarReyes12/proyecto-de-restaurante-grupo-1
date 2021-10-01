@@ -185,18 +185,6 @@ finalizar_compra.addEventListener("submit", (e) => {
     });
 })
 
-<<<<<<< HEAD
-const enviar = (data) => {
-    Email.send({
-        Host: "smtp.gmail.com",
-        Username: 'restauranteonline20211@gmail.com',
-        Password: "Restaurante12",
-        To: 'restauranteonline20211@gmail.com',
-        From: 'restauranteonline20211@gmail.com',
-        Subject  : data.subject,
-        Body     : data.body
-    }).then((message)=>alert("mensaje enviado con exito"));
-=======
 
 
 /* 
@@ -246,6 +234,5 @@ const factura_productos = () => {
     `;
 
     return factura
->>>>>>> efffa1241905faaee469db5e483d64af135290c9
 }
 

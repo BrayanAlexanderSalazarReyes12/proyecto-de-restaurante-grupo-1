@@ -43,7 +43,9 @@ window.addEventListener("click",function(e){
 
 botonc.addEventListener("click",function(){
     console.log(respuesta);
-    
+    if(respuesta==""){
+        respuesta="Reserva Normal";
+    }
 })
 
 botoncumple.addEventListener("click",function(){

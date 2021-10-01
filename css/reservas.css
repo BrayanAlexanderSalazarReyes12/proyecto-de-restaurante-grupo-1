@@ -15,7 +15,7 @@
 .modal1{
     width: 90%;
     height: 90%;
-    background: var(--color-3);;
+    background: var(--color-3);
     border-radius: 15px;
     text-align: center;
     flex-direction: column;
@@ -23,6 +23,7 @@
     transition: transform 1s;
     transform: translateY(0%);
     overflow-y: scroll;
+    
 }
 
 
@@ -74,12 +75,11 @@ section.reservaciones div.formulario-reservas{
 }
 
 
-.btn-ttc,
-.btn-ttc:hover,
-.btn-ttc:active {
-    color: black;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    background-color: #007da7;
+textarea.tipo-reserva{
+    background-color: var(--color-3);
+    border: none;
+    resize: none;
+    text-align: center;
     
 }
 

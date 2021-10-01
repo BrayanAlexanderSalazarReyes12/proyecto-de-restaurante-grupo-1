@@ -105,15 +105,18 @@ modal.onclick = function(){
          * @realizar_operaciones_productos_suma
         */
         var theFirstChildSuma = parentElement_suma.firstChild;
+        var cantidades_de_productos = 0;
         for(i=0; i<datos_de_producto_compra.length;i++){
             var cont = i+1;
             
             var g = document.createElement('script');
             g.text = "var precio_nuevo = parseInt(localStorage.getItem('precio'));"+"var a_"+i+" = parseInt(localStorage.getItem('cantidad_pedidos_"+i+"'));"+"suma_"+cont+".onclick = function(){if(a_"+i+"<30){a_"+i+" = a_"+i+" + 1; cantidad_"+cont+".innerHTML=a_"+i+";localStorage.setItem('cantidad_pedidos_"+i+"',a_"+i+"); precio_nuevo = precio_nuevo + parseInt(datos_de_producto_compra["+i+"].precio); localStorage.setItem('precio',precio_nuevo);total_de_cuentas_pedidos();}}"        
-            parentElement_suma.insertBefore(g,theFirstChildSuma);        
-            
+            parentElement_suma.insertBefore(g,theFirstChildSuma);
+            cantidades_de_productos = cantidades_de_productos + parseInt(localStorage.getItem('cantidad_pedidos_'+i));   
+            //console.log(cantidades_de_productos);
         }
-        total_de_cuentas_pedidos();
+        localStorage.setItem("cantidad_de_producto_total",cantidades_de_productos);
+        total_de_cuentas_pedidos(cantidades_de_productos);
     }
 }
 
@@ -204,7 +207,7 @@ const factura_productos = () => {
     let productos_storage = JSON.parse(localStorage.getItem("cart")) 
     for(i = 0; i < productos_storage.length; i++) {
         const producto = productos_storage[i];
-        let total = Number(producto.count * producto.precio) 
+        let total = Number(cantidad_de_productos_pedidos[i] * producto.precio) 
         suma_total += total;
         lista_prod += `
             <tr style='border: 3px solid #d95204'>

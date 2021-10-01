@@ -16,18 +16,16 @@ const aumentar_icon_carrito = (carrito) => {
     if(carrito != null){
         let num_ = 0
         if (carrito.length > 0){
-            carrito.forEach(p => {
-                for(i=0; i<count_productos_st.length; i++){
-                    if(localStorage.getItem("cantidad_pedidos_"+i)==null)
-                    {
-                        num_ = num_ + p.count;
-                    }else{
-                    
-                        num_ = num_ + parseInt(localStorage.getItem("cantidad_pedidos_"+i));
-                    
-                    }
+            for(i=0; i<count_productos_st.length; i++){
+                if(localStorage.getItem("cantidad_pedidos_"+i)==null)
+                {
+                    num_ = num_ + count_productos_st[i].count;
+                    console.log(num_);
+                }else{
+                    num_ = parseInt(localStorage.getItem("cantidad_de_producto_total"));
+                    //console.log(num_);
                 }
-            });
+            }
             document.querySelector("#num_cart")
             .innerHTML = num_;
         }

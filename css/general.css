@@ -119,6 +119,36 @@ div.serviciosof{
     font-weight: bold;
 }
 
+/* Estilos para todas las card */
+.card-radius{
+    border-radius: 15px 0px 15px 0px !important;
+    border: 0px solid transparent !important;
+    box-shadow:  5px 5px 9px #c54b04,
+    -5px -5px 9px #ed5904 !important;
+}
+.card-{
+    border-radius: 15px 0px 15px 0px !important;
+    border: 0px solid transparent !important;
+    box-shadow:  5px 5px 9px #dc9105,
+    -5px -5px 9px #ffad05 !important;
+}
+.card__{
+    border-radius: 15px 0px 15px 0px !important;
+    border: 0px solid transparent !important;
+    box-shadow: 5px 5px 9px #c7c7c7, -5px -5px 9px #ffffff !important;
+}
+.card-titulo{
+    font-family: var(--fuente) !important;
+    font-weight: var(--weight-subtitulos) !important;
+}
+
+.card-texto{
+    font-family: var(--fuente) !important;
+}
+.card-imf-radius{
+    border-radius: 15px 0px 0px 0px !important;
+}
+/* Estilos para todas las card */
 
 #loading{
     top: 43%;

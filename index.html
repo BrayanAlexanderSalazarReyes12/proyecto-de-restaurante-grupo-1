@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <title>Restaurante</title>
     <!-- Required meta tags -->
@@ -21,10 +22,7 @@
     <link rel="stylesheet" href="css/carga_pagina.css">
     <link rel="stylesheet" href="css/modificar_cont_pedidos.css">
     <!-- ANIMATE -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,7 +76,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#mapa">Mapa</a>
                         </li>
-                        
+
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -110,21 +108,24 @@
     </div>
     <!-- FIN DE REDES SOCIALES -->
 
-    
-    
-    
+
+
+
     <!-- CARRITO DE COMPRAS -->
     <div class="icon-carrito" id="carrito_de_compras">
         <small id="num_cart" class="num_cart"></small>
-        <i class="fas fa-cart-arrow-down w-100 h-100 d-flex justify-content-center align-items-center" data-bs-toggle="modal" href="#exampleModalToggle"></i>
+        <i class="fas fa-cart-arrow-down w-100 h-100 d-flex justify-content-center align-items-center"
+            data-bs-toggle="modal" href="#exampleModalToggle"></i>
     </div>
     <!-- Modal del carrito -->
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
         <div class='modal-dialog modal-fullscreen'>
             <div class='modal-content'>
                 <div class='modal-header'>
                     <h1 class='display-5 text-center'>Carrito De Compra</h1>
-                    <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close' id="cerrar_carrito"></button>
+                    <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'
+                        id="cerrar_carrito"></button>
                 </div>
                 <!-- Carrito -->
                 <section class="carrito row m-0">
@@ -150,41 +151,49 @@
             </div>
         </div>
     </div>
-    <div id=resta><div id="hijo_resta"></div></div>
-    <div id=suma><div id="hijo_suma"></div></div>
-    <div id="eliminar"><div id="hijo_eliminar"></div></div>
+    <div id=resta>
+        <div id="hijo_resta"></div>
+    </div>
+    <div id=suma>
+        <div id="hijo_suma"></div>
+    </div>
+    <div id="eliminar">
+        <div id="hijo_eliminar"></div>
+    </div>
     <!-- CARRITO DE COMPRAS -->
 
 
     <!-- MODAL PARA FINALIZAR COMPRA -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        
+
 
         <div class="modal-dialog">
-          <div class="modal-content position-relative">
-            <div id="loading" class="d-none spinner-border text-danger position-absolute" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Completar Pedido</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div id="modal_body" class="modal-body ">
-              <form id="finalizar_compra">
-                <div class="mb-3">
-                  <input type="text" class="input-general" name="name" id="compra_nombre" placeholder="Nombre" required>
+            <div class="modal-content position-relative">
+                <div id="loading" class="d-none spinner-border text-danger position-absolute" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
-                <div class="mb-3">
-                    <input type="email" class="input-general" name="email" id="compra_email" placeholder="Email" required>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Completar Pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="text-center d-flex justify-content-center">
-                    <button id="btn_disable" type="submit" class="btn-general">Finalizar Compra</button>
+                <div id="modal_body" class="modal-body ">
+                    <form id="finalizar_compra">
+                        <div class="mb-3">
+                            <input type="text" class="input-general" name="name" id="compra_nombre" placeholder="Nombre"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="input-general" name="email" id="compra_email" placeholder="Email"
+                                required>
+                        </div>
+                        <div class="text-center d-flex justify-content-center">
+                            <button id="btn_disable" type="submit" class="btn-general">Finalizar Compra</button>
+                        </div>
+                    </form>
                 </div>
-              </form>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
     <!-- MODAL PARA FINALIZAR COMPRA -->
 
 
@@ -194,151 +203,185 @@
 
 
     <!-- INICIO HOME -->
-    <section class="ctn" id="Home">
-    <div class="main_carr">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <section class="ctn" id="Home" style="padding-top:56px">
+        <div class="main_carr">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.pexels.com/photos/3779791/pexels-photo-3779791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="imagen 1" width="620px"
+                            height="450px" style="object-fit: cover;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Slider/carr_2.jpg" class="d-block w-100" alt="imagen 2" width="620px"
+                            height="450px" style="object-fit: cover;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Slider/carr_3.jpg" class="d-block w-100" alt="imagen 3" width="620px"
+                            height="450px" style="object-fit: cover;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="main_prensent">
+
+            <img src="img/foto2@2x.png" alt="" width="100%" height="450px">
+            <div class="txt_pre">
+
+                <h1>Nuestra propuesta</h1>
+                <p style="height:144px; overflow:hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Ratione debitis itaque dolorum animi! Nisi modi aut recusandae nesciunt perspiciatis laborum, odit
+                    rerum amet accusamus. Soluta quasi non fuga. Commodi, fugit!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, vitae libero! Aliquam vel fuga
+                    itaque, eum, esse facere quam laborum odio, eveniet voluptates est quia mollitia veniam tempora hic
+                    delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rerum nisi at magnam earum!
+                    Illo exercitationem provident quasi rerum, unde adipisci, debitis excepturi error accusantium
+                    impedit obcaecati, cumque dignissimos earum?</p>
+            </div>
+
+
+        </div>
+
+
+
+
+        </div>
+        <!---------- lista de recomendaciones-------- -->
+        <section id="recomendaciones">
+            <div class="">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-5">
+                        <h1 class="ca_title">Recomendaciones del chef</h1>
+                        <br><br>
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col">
+                                <div class="card card__">
+                                    <img src="img/recomendaciones/reco-1.jpg" class="card-img-top card-imf-radius" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card__">
+                                    <img src="img/recomendaciones/reco-2.jpg" class="card-img-top card-imf-radius" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card__">
+                                    <img src="img/recomendaciones/reco-3.jpg" class="card-img-top card-imf-radius" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card__">
+                                    <img src="img/recomendaciones/reco-4.jpg" class="card-img-top card-imf-radius" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------Fin de recomendaciones-------- -->
+
+                    </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center">
+                        <img src="img/menu@2x.png" class="img-thumbnail" alt="menu">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="main_prensent">
+
+            <img src="img/foto3@2x.png" alt="" width="100%" height="450px">
+            <div class="txt_pre">
+
+                <h1 class="title_pre">Organizamos tu evento</h1>
+                <p class="parra-title" style="height:144px; overflow:hidden">Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Ratione debitis itaque dolorum animi! Nisi modi aut recusandae nesciunt
+                    perspiciatis laborum, odit rerum amet accusamus. Soluta quasi non fuga. Commodi, fugit!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, vitae libero! Aliquam vel fuga
+                    itaque, eum, esse facere quam laborum odio, eveniet voluptates est quia mollitia veniam tempora hic
+                    delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rerum nisi at magnam earum!
+                    Illo exercitationem provident quasi rerum, unde adipisci, debitis excepturi error accusantium
+                    impedit obcaecati, cumque dignissimos earum?</p>
+            </div>
+
+        </div>
+        <!-- slider de comentarios -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/Slider/carr_1.jpg" class="d-block w-100" alt="imagen 1" width="620px" height="450px">
-              </div>
-              <div class="carousel-item">
-                <img src="img/Slider/carr_2.jpg" class="d-block w-100" alt="imagen 2" width="620px" height="450px">
-              </div>
-              <div class="carousel-item">
-                <img src="img/Slider/carr_3.jpg" class="d-block w-100" alt="imagen 3" width="620px" height="450px">
-              </div>
+                <div class="carousel-item active" style="height:210px" data-bs-interval="10000">
+                    <div class="d-flex justify-content-center align-content-center h-100"
+                        style="width:calc(100% - 10%); position: relative; left:5%;">
+                        <div class="d-flex align-items-center">
+                            <img class="col-6" src="img/testimonio1@2x.png"
+                                style="width: 100px; height: 100px; border-radius: 50%; margin-right: 60px;" alt="">
+
+                            <p class="slider-img" style="width: 470px; display: inline;">Lorem ipsum dolor sit, amet
+                                consectetur adipisicing elit. Voluptatum, iste tenetur, tempore, dicta deleniti nihil
+                                sunt molestias recusandae blanditiis quas fugiat beatae eos accusamus laudantium
+                                voluptates totam cupiditate nesciunt nulla.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" style="width:5% !important" type="button"
+                data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" style="width:5% !important" type="button"
+                data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
-          </div>
-    </div>
- 
-    <div class="main_prensent">
-     
-         <img src="img/foto2@2x.png" alt="" width="100%" height="450px">  
-         <div class="txt_pre">
-
-             <h1>Nuestra propuesta</h1>
-             <p style="height:144px; overflow:hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione debitis itaque dolorum animi! Nisi modi aut recusandae nesciunt perspiciatis laborum, odit rerum amet accusamus. Soluta quasi non fuga. Commodi, fugit!
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, vitae libero! Aliquam vel fuga itaque, eum, esse facere quam laborum odio, eveniet voluptates est quia mollitia veniam tempora hic delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rerum nisi at magnam earum! Illo exercitationem provident quasi rerum, unde adipisci, debitis excepturi error accusantium impedit obcaecati, cumque dignissimos earum?</p>
-         </div> 
-
-      
-     </div>
-         
-
-    
-
-    </div>
-  <!---------- lista de recomendaciones-------- -->
-  <section id="recomendaciones">
-     <div class="container">
-        <div class="row">
-           <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-5">
-            <h1 class="ca_title">Recomendaciones del chef</h1>
-            <br><br>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                  <div class="card">
-                    <img src="img/recomendaciones/reco-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img src="img/recomendaciones/reco-2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img src="img/recomendaciones/reco-3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img src="img/recomendaciones/reco-4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <!-- ----------Fin de recomendaciones-------- -->
-
-                </div >
-                 <div class="col">
-                      <img src="img/menu@2x.png" class="img-thumbnail" alt="menu">
-
-                </div>
-          </div>
-     </div>
+        </div>
+        <!-- fin de comentarios -->
     </section>
-     <div class="main_prensent">
-     
-        <img  src="img/foto3@2x.png" alt="" width="100%" height="450px">  
-        <div class="txt_pre">
-
-            <h1 class="title_pre">Organizamos tu evento</h1>
-            <p class="parra-title" style="height:144px; overflow:hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione debitis itaque dolorum animi! Nisi modi aut recusandae nesciunt perspiciatis laborum, odit rerum amet accusamus. Soluta quasi non fuga. Commodi, fugit!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, vitae libero! Aliquam vel fuga itaque, eum, esse facere quam laborum odio, eveniet voluptates est quia mollitia veniam tempora hic delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rerum nisi at magnam earum! Illo exercitationem provident quasi rerum, unde adipisci, debitis excepturi error accusantium impedit obcaecati, cumque dignissimos earum?</p>
-        </div> 
-     
-    </div>
-      <!-- slider de comentarios -->
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="height:210px" data-bs-interval="10000">
-                <div class="d-flex justify-content-center align-content-center h-100" style="width:calc(100% - 10%); position: relative; left:5%;">
-                    <div class="d-flex align-items-center">
-                        <img class="col-6" src="img/testimonio1@2x.png" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 60px;" alt="">
-
-                        <p class="slider-img" style="width: 470px; display: inline;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, iste tenetur, tempore, dicta deleniti nihil sunt molestias recusandae blanditiis quas fugiat beatae eos accusamus laudantium voluptates totam cupiditate nesciunt nulla.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" style="width:5% !important" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" style="width:5% !important" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- fin de comentarios -->
-</section>
     <!-- FIN  HOME-->
 
     <!-- INICIO Nosotros -->
@@ -346,14 +389,18 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-5" >
-                    <img src="img/ft_his.jpg" class="img-thumbnail" alt="ft del restaurante" width="400px" height="300px">
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-5">
+                    <img src="img/ft_his.jpg" class="img-thumbnail" alt="ft del restaurante" width="400px"
+                        height="300px">
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-5">
                     <h1>Historia</h1>
                     <br>
-                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa a dolorem suscipit animi provident fugiat dolor harum! Iusto quibusdam corporis mollitia dolor, ea repellendus, quo assumenda expedita cum ab fugiat! <br>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi eveniet id doloremque eum sapiente reiciendis. Temporibus voluptate laudantium ipsam dolorem? </p>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa a
+                        dolorem suscipit animi provident fugiat dolor harum! Iusto quibusdam corporis mollitia dolor, ea
+                        repellendus, quo assumenda expedita cum ab fugiat! <br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi eveniet id doloremque eum
+                        sapiente reiciendis. Temporibus voluptate laudantium ipsam dolorem? </p>
                 </div>
 
             </div>
@@ -364,29 +411,35 @@
                 <h1 style="color: #fff;"> Equipo de trabajo</h1>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
-                        <img src="img/personal1@2x.png" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <img src="img/personal1@2x.png" style="width: 100px; height: 100px; border-radius: 50%; box-shadow:  5px 5px 9px #593a3a,
+                        -5px -5px 9px #8b5a5a;" alt="">
                         <div class="txt_equi">
                             <h5 style="color: #fff;">carlos</h2>
                         </div>
-                        </div>
+                    </div>
                     <div class="col">
-                        <img src="img/personal2@2x.png" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <img src="img/personal2@2x.png" style="width: 100px; height: 100px; border-radius: 50%;box-shadow:  5px 5px 9px #593a3a,
+             -5px -5px 9px #8b5a5a;" alt="">
                         <h5 style="color: #fff;"> maria</h5>
                     </div>
                     <div class="col">
-                        <img src="img/personal3@2x.png" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <img src="img/personal3@2x.png" style="width: 100px; height: 100px; border-radius: 50%;box-shadow:  5px 5px 9px #593a3a,
+             -5px -5px 9px #8b5a5a;" alt="">
                         <h5 style="color: #fff;"> julia</h5>
                     </div>
                     <div class="col">
-                            <img src="img/peronal4.jpg " style="width: 100px; height: 100px; border-radius: 50%;" alt="">
-                            <h5 style="color: #fff;"> sergio</h5>
-                        </div>
+                        <img src="img/peronal4.jpg " style="width: 100px; height: 100px; border-radius: 50%;box-shadow:  5px 5px 9px #593a3a,
+             -5px -5px 9px #8b5a5a;" alt="">
+                        <h5 style="color: #fff;"> sergio</h5>
+                    </div>
                     <div class="col">
-                        <img src="img/personal5.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <img src="img/personal5.jpg" style="width: 100px; height: 100px; border-radius: 50%;box-shadow:  5px 5px 9px #593a3a,
+             -5px -5px 9px #8b5a5a;" alt="">
                         <h5 style="color: #fff;"> juan</h5>
                     </div>
                     <div class="col">
-                        <img src="img/personal6.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt="">
+                        <img src="img/personal6.jpg" style="width: 100px; height: 100px; border-radius: 50%;box-shadow:  5px 5px 9px #593a3a,
+             -5px -5px 9px #8b5a5a;" alt="">
                         <h5 style="color: #fff;"> camila</h5>
                     </div>
                 </div>
@@ -404,15 +457,21 @@
                 <h3 class="head2">NUESTRO MENU</h3>
             </div>
         </div>
-    
+
         <div class="partes_menu">
             <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist" style="padding-left: 3rem;">
-                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Ensaladas</button>
-                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Sopas</button>
-                  <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Aperitivos</button>
-                  <button class="nav-link" id="nav-bebidas-tab" data-bs-toggle="tab" data-bs-target="#nav-bebidas" type="button" role="tab" aria-controls="nav-bebidas" aria-selected="false">Bebidas</button>
-                  <button class="nav-link" id="nav-postres-tab" data-bs-toggle="tab" data-bs-target="#nav-postres" type="button" role="tab" aria-controls="nav-postres" aria-selected="false">Postres</button>
+                <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist"
+                    style="padding-left: 3rem;">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Ensaladas</button>
+                    <button class="nav-link text-dark" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Sopas</button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Aperitivos</button>
+                    <button class="nav-link" id="nav-bebidas-tab" data-bs-toggle="tab" data-bs-target="#nav-bebidas"
+                        type="button" role="tab" aria-controls="nav-bebidas" aria-selected="false">Bebidas</button>
+                    <button class="nav-link" id="nav-postres-tab" data-bs-toggle="tab" data-bs-target="#nav-postres"
+                        type="button" role="tab" aria-controls="nav-postres" aria-selected="false">Postres</button>
                 </div>
             </nav>
             <div class="tab-content p-5" id="nav-tabContent">
@@ -420,7 +479,7 @@
                     <div class="menu_muestra_1">
                         <div id="ensaladas" class='row row-cols-1 row-cols-md-3 g-4'>
                             <!-- Lista dde ensaladas -->
-        
+
                         </div>
                     </div>
                 </div>
@@ -454,34 +513,41 @@
                         </div>
                     </div>
                 </div>
-              </div>
+            </div>
         </div>
         <!-- MODAL PARA MOSTRAR DETALLES DEL PRODUCTO ESPECIFICO -->
-        <div class='modal' id='exampleModalProducto' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+        <div class='modal' id='exampleModalProducto' tabindex='-1' aria-labelledby='exampleModalLabel'
+            aria-hidden='true'>
             <div class='modal-dialog'>
-              <div class='modal-content'>
-                  <input id='id_prod' type="hidden" value="">
-                <div class='modal-header'>
-                  <h5 id="modal_titulo" class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi aspernatur deserunt!</h5>
-                  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-                </div>
-                <div class='modal-body'>
-                  <img id="modal_img" src='img/ensaladas/en_1.webp' alt='...' class='card-img-top '>
-                  <p id="modal_descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae architecto aut, veritatis quidem nobis.</p>
-                </div>
-                <div class='modal-footer d-flex justify-content-between'>
-                    <p id='modal_precio'></p>
-                    <div class='cantidad_producto d-flex justify-content-between'>
-                        <i id="mas" class="fas fa-plus"></i>
-                        <small id="count_prod">1</small>
-                        <i id="menos" class="fas fa-minus"></i>
+                <div class='modal-content'>
+                    <input id='id_prod' type="hidden" value="">
+                    <div class='modal-header'>
+                        <h5 id="modal_titulo" class='modal-title'>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ipsam sequi aspernatur deserunt!</h5>
+                        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
                     </div>
-                  <button id="add_cart" type='button' class='btn btn-primary'>Add Cart</button>
+                    <div class='modal-body'>
+                        <img id="modal_img" src='img/ensaladas/en_1.webp' alt='...' class='card-img-top '>
+                        <p id="modal_descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugit
+                            laboriosam obcaecati animi, asperiores atque nulla dolorem praesentium harum, vitae
+                            architecto aut, veritatis quidem nobis.</p>
+                    </div>
+                    <div class='modal-footer d-flex justify-content-between'>
+                        <p id='modal_precio'></p>
+                        <div class='cantidad_producto d-flex justify-content-between'>
+                            <i id="mas" class="fas fa-plus"></i>
+                            <small id="count_prod">1</small>
+                            <i id="menos" class="fas fa-minus"></i>
+                        </div>
+                        <button id="add_cart" type='button' class='btn btn-primary'>Add Cart</button>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        <a href="carta/menu.pdf" class='btn btn-primary' href='#' role='button'><i class="fa fa-download"></i>DESCARGAR MENU</a>
+        </div>
+        <div class="text-center p-3 ">
+            <a href="carta/menu.pdf" class='btn btn-primary' href='#' role='button'><i class="fa fa-download"></i>DESCARGAR
+                MENU</a>
+            </div>
     </div>
     <!-- FIN MENU -->
     <br><br><br>
@@ -491,10 +557,10 @@
             <div class="texto col-12 col-md-6 d-flex justify-content-center align-items-center">
                 <div>
                     <h1 class="text-center">Servicios</h1>
-                    <p class="text-center" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Esse eius, architecto ipsum delectus placeat odit veritatis reprehenderit vero 
-                        assumenda id? Laborum quo numquam nihil enim, odit consequatur quasi cum. 
-                        Exercitationem odit ea qui quo fugit id ipsa quos voluptatum, beatae placeat 
+                    <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Esse eius, architecto ipsum delectus placeat odit veritatis reprehenderit vero
+                        assumenda id? Laborum quo numquam nihil enim, odit consequatur quasi cum.
+                        Exercitationem odit ea qui quo fugit id ipsa quos voluptatum, beatae placeat
                         culpa at dolorum consequatur tempore facere modi quasi. Nobis?</p>
                 </div>
             </div>
@@ -502,64 +568,82 @@
                 <div class="Servicios_card ">
                     <div class="container">
                         <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <div class="col">
-                            <div class="card">
-                                <img src="img/eventos/cumple.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">Celebración de cumpleaños</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col">
-                            <div class="card">
-                                <img src="img/eventos/aniversario.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">Aniversarios</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>
-                            </div>
-                            </div>
-                            </div>
-                            <div class="col">
-                            <div class="card">
-                                <img src="img/eventos/cumple_ninos.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">Fiestas infantiles</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                                <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>    
-                            </div>
-                            </div>
-                            </div>
-                            <div class="col">
-                            <div class="card">
-                                <img src="img/eventos/propuestas_o_declaraciones.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">Declaracione y propuestas</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>    
-                            </div>
-                            </div>
-                            </div>
-                            <div class="col">
-                                <div class="card">
-                                    <img src="img/eventos/despedidas.webp" class="card-img-top" alt="...">
+                            <div class="col col-lg-6">
+                                <div class="card card-">
+                                    <img src="img/eventos/cumple.webp" class="card-img-top card-imf-radius" alt="...">
                                     <div class="card-body">
-                                    <h5 class="card-title">Despedidas</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>    
-                                </div>
+                                        <h5 class="card-title">Celebración de cumpleaños</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <a class='btn-general text-decoration-none' href='#contactos'
+                                            role='button'>¿PREGUNTAS?CONTACTANOS</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="card">
-                                    <img src="img/eventos/cen_amigos_1.webp" class="card-img-top" alt="...">
+                            <div class="col col-lg-6">
+                                <div class="card card-">
+                                    <img src="img/eventos/aniversario.webp" class="card-img-top card-imf-radius" alt="...">
                                     <div class="card-body">
-                                    <h5 class="card-title">Cena con amigos</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <a class='btn btn-primary' href='#contactos' role='button'>¿PREGUNTAS?CONTACTANOS</a>    
+                                        <h5 class="card-title">Aniversarios</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <a class='btn-general text-decoration-none' href='#contactos'
+                                            role='button'>¿PREGUNTAS?CONTACTANOS</a>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="card card-">
+                                    <img src="img/eventos/cumple_ninos.webp" class="card-img-top card-imf-radius" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fiestas infantiles</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content.</p>
+                                        <a class='btn-general text-decoration-none' href='#contactos'
+                                            role='button'>¿PREGUNTAS?CONTACTANOS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="card card-">
+                                    <img src="img/eventos/propuestas_o_declaraciones.webp" class="card-img-top card-imf-radius"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Declaracione y propuestas</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <a class='btn-general text-decoration-none' href='#contactos'
+                                            role='button'>¿PREGUNTAS?CONTACTANOS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="card card-">
+                                    <img src="img/eventos/despedidas.webp" class="card-img-top card-imf-radius" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Despedidas</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <a class='btn-general text-decoration-none' href='#contactos'
+                                            role='button'>¿PREGUNTAS?CONTACTANOS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="card card-">
+                                    <img src="img/eventos/cen_amigos_1.webp" class="card-img-top card-imf-radius" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cena con amigos</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <a class='btn-general text-decoration-none' href='#contactos'
+                                            role='button'>¿PREGUNTAS?CONTACTANOS</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -572,8 +656,8 @@
     <!-- ------------------------------FIN DEL CONTENT-------------------------------- -->
 
     <!-- SECTION DE CONTACTACTENOS -->
-        
-        <section id="contactos" class="contactanos row m-0">
+
+    <section id="contactos" class="contactanos row m-0 flex-row-reverse">
         <div class="texto col-12 col-md-6 d-flex justify-content-center align-items-center">
             <div>
                 <h1 class="text-center">Contáctanos</h1>
@@ -584,30 +668,30 @@
         </div>
         <div class="formulario col-12 col-md-6">
             <div class="container">
-                <form id="contactanos" action="https://formsubmit.co/jhonierg20@gmail.com" method="POST" >
-                <!--<input type="hidden" name="_captcha" value="false">-->    
+                <form id="contactanos" action="https://formsubmit.co/jhonierg20@gmail.com" method="POST">
+                    <!--<input type="hidden" name="_captcha" value="false">-->
                     <input type="hidden" name="_autoresponse" value="Reserva Confirmada">
                     <div class="mb-3 row">
                         <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                         <div class="col-sm-1-12">
-                            <input type="text" minlength="4" maxlength="9" class="form-control" name="nombre" id="nombres"
-                                placeholder="Nombre" required>
+                            <input type="text" minlength="4" maxlength="9" class="form-control" name="nombre"
+                                id="nombres" placeholder="Nombre" required>
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                         <div class="col-sm-1-12">
-                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="email" id="correo"
-                                placeholder="Correo" required>
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control"
+                                name="email" id="correo" placeholder="Correo" required>
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                         <div class="col-sm-1-12">
-                            <input type="text" class="form-control" name="telefono" id="telefono"
-                                placeholder="Telefono" required>
+                            <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Telefono"
+                                required>
                         </div>
                     </div>
 
@@ -625,82 +709,94 @@
 
                     <div class="mb-3 row w-100">
                         <div class="col-sm-10 text-center w-100">
-                            <button type="submit" class="btn">Action</button>
+                            <button type="submit" class="btn">Enviar</button>
                         </div>
                     </div>
                 </form>
-                
+
             </div>
         </div>
     </section>
     <!-- FIN DE CONTACTENOS -->
 
 
-<!--RESERVACIONES-->
+    <!--RESERVACIONES-->
 
-<section class="reservaciones">
-    <div class="modal-reservas col-12" id="modal-rese">
-        <div class="modal1  modal-close col-10" >
-            <p class="close">X</p>
-            <div class="modal-textos">
-                <h2>Reserva en Linea</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                <hr>
-                <!--Cards de Servicios-->
-                <div class="" id="reservas-">
+    <section class="reservaciones">
+        <div class="modal-reservas col-12" id="modal-rese">
+            <div class="modal1  modal-close col-10">
+                <p class="close">X</p>
+                <div class="modal-textos">
+                    <h2>Reserva en Linea</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                    <hr>
+                    <!--Cards de Servicios-->
+                    <div class="" id="reservas-">
                         <div class="serviciosof col-12">
                             <div class="Servicios_card">
                                 <div class="container">
                                     <div class="row row-cols-1 row-cols-md-6 g-1">
                                         <div class="col">
-                                        <div class="card">
-                                            <div class="card-body">
-                                            <h5 class="card-title">Celebración de cumpleaños</h5>
-                                            <button type="button" style="background: rgb(37, 81, 175);color: white;" class="btn btn-cumple btn-ttc">Seleccionar</button>
-                                            </div>
-                                        </div>
-                                        </div>
-                                        <div class="col">
-                                        <div class="card">
-                                            <div class="card-body">
-                                            <h5 class="card-title">Aniversarios</h5>
-                                            <br>
-                                            <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-aniversario btn-ttc">Seleccionar</button>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        <div class="col">
-                                        <div class="card">
-                                            <div class="card-body">
-                                            <h5 class="card-title">Fiestas infantiles</h5>
-                                            <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-infantiles btn-ttc">Seleccionar</button>    
-                                        </div>
-                                        </div>
-                                        </div>
-                                        <div class="col">
-                                        <div class="card">
-                                            <div class="card-body">
-                                            <h5 class="card-title">Declaraciones y propuestas</h5>
-                                            <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-declaraciones btn-ttc">Seleccionar</button>    
-                                        </div>
-                                        </div>
-                                        </div>
-                                        <div class="col">
                                             <div class="card">
                                                 <div class="card-body">
-                                                <h5 class="card-title">Despedidas</h5>
-                                                <br>
-                                                <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-despedidas btn-ttc">Seleccionar</button>    
-                                            </div>
+                                                    <h5 class="card-title">Celebración de cumpleaños</h5>
+                                                    <button type="button"
+                                                        style="background: rgb(37, 81, 175);color: white;"
+                                                        class="btn btn-cumple btn-ttc">Seleccionar</button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="card">
                                                 <div class="card-body">
-                                                <h5 class="card-title">Cena con amigos</h5>
-                                                
-                                                <button type="button"  style="background: rgb(37, 81, 175);color: white;" class="btn btn-cena btn-ttc">Seleccionar</button>    
+                                                    <h5 class="card-title">Aniversarios</h5>
+                                                    <br>
+                                                    <button type="button"
+                                                        style="background: rgb(37, 81, 175);color: white;"
+                                                        class="btn btn-aniversario btn-ttc">Seleccionar</button>
+                                                </div>
                                             </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Fiestas infantiles</h5>
+                                                    <button type="button"
+                                                        style="background: rgb(37, 81, 175);color: white;"
+                                                        class="btn btn-infantiles btn-ttc">Seleccionar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Declaraciones y propuestas</h5>
+                                                    <button type="button"
+                                                        style="background: rgb(37, 81, 175);color: white;"
+                                                        class="btn btn-declaraciones btn-ttc">Seleccionar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Despedidas</h5>
+                                                    <br>
+                                                    <button type="button"
+                                                        style="background: rgb(37, 81, 175);color: white;"
+                                                        class="btn btn-despedidas btn-ttc">Seleccionar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Cena con amigos</h5>
+
+                                                    <button type="button"
+                                                        style="background: rgb(37, 81, 175);color: white;"
+                                                        class="btn btn-cena btn-ttc">Seleccionar</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -710,40 +806,42 @@
 
 
 
-                    <!--Formulario-->
-                    <div class="formulario-reservas col-8">
-                            
-                            <form class="col-8 justify-content-center" id="form-resevas" action="https://formsubmit.co/jhonierg20@gmail.com" method="POST" >
-                                <input type="hidden" name="_subject" value="Nueva Reserva!" >
+                        <!--Formulario-->
+                        <div class="formulario-reservas col-8">
+
+                            <form class="col-8 justify-content-center" id="form-resevas"
+                                action="https://formsubmit.co/jhonierg20@gmail.com" method="POST">
+                                <input type="hidden" name="_subject" value="Nueva Reserva!">
                                 <input type="hidden" name="_autoresponse" value="Reserva Confirmada!!">
                                 <input type="hidden" name="_template" value="table">
-                                
-                                    <!--Error en enviar el tipo de reserva-->
+
+                                <!--Error en enviar el tipo de reserva-->
                                 <div class="mb-3">
-                                    <div class=" tipo-reserva" >
-                                        <textarea class="tipo-reserva" name="Reserva" id="respuesta" cols="30" rows="1" ></textarea>
-                                        
-                                    <!----> 
-                                    <!----> 
+                                    <div class=" tipo-reserva">
+                                        <textarea class="tipo-reserva" name="Reserva" id="respuesta" cols="30"
+                                            rows="1"></textarea>
+
+                                        <!---->
+                                        <!---->
                                     </div>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                                     <div class="col-sm-1-12 row-cols-md-1">
-                                        <input type="text" minlength="4" maxlength="9" class="form-control" name="nombre" id="nombres"
-                                            placeholder="Nombre" required>
+                                        <input type="text" minlength="4" maxlength="9" class="form-control"
+                                            name="nombre" id="nombres" placeholder="Nombre" required>
                                     </div>
                                 </div>
-            
+
                                 <div class="mb-3">
                                     <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                                     <div class="col-sm-1-12">
-                                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="email" id="email"
-                                            placeholder="Correo" required>
+                                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                            class="form-control" name="email" id="email" placeholder="Correo" required>
                                     </div>
                                 </div>
-            
+
                                 <div class="mb-3">
                                     <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                                     <div class="col-sm-1-12">
@@ -751,103 +849,111 @@
                                             placeholder="Telefono" required>
                                     </div>
                                 </div>
-            
+
                                 <div class="form-check pb-3 col-12">
-                                    <input class="form-check-input" type="checkbox"  value=""  id="terminos" required>
-                                    <label class="form-check-label text-white" style="padding-right: 60%;" for="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="" id="terminos" required>
+                                    <label class="form-check-label text-white" style="padding-right: 60%;"
+                                        for="flexCheckDefault">
                                         Acepto Terminos y condiciones
                                     </label>
                                 </div>
-            
+
                                 <div class="mb-3 w-100">
                                     <div class="col-sm-10 text-center w-100">
-                                        
+
                                         <button type="submit" class="btn boton-confirmar">Confirmar</button>
                                     </div>
                                 </div>
                             </form>
-                            
-                        
+
+
+                        </div>
+
+
                     </div>
-
-
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
-<script src="js/reservas.js"></script>
+    <script src="js/reservas.js"></script>
 
 
 
 
 
-<!--*************************************SECTION MAPA*******************************************-->
+    <!--*************************************SECTION MAPA*******************************************-->
 
-<section id="mapa" >
-        
-    <div class="container_1" >
-        <div class="grid_1">
-            <h3 class="head3">MAPA DEL SITIO</h3>
-        </div>
-    </div>
-    <div class="lista_mapa  border border-danger">
-        <div class="lista_mapa row col-xs-10">
-            
-            <div class="col-md-2">
-                <br>
-                <a href="#"><h5>GENERAL</h5></a>
-                <a href="#">Inicio</a>
+    <section id="mapa">
+        <div class="lista_mapa  border border-danger">
+            <div class="lista_mapa row col-xs-10">
+
+                <div class="col-md-2">
+                    <br>
+                    <a href="#">
+                        <h5>GENERAL</h5>
+                    </a>
+                    <a href="#">Inicio</a>
+                </div>
+                <div class="col-md-2">
+                    <br>
+                    <a href="#Nosotros">
+                        <h5>NOSOTROS</h5>
+                    </a>
+                    <a href="#Nosotros">Nuestra Historia</a>
+                    <br>
+                    <a href="#">Nuestra Propuesta</a>
+                </div>
+                <div class="col-md-2">
+                    <br>
+                    <a href="#menu">
+                        <h5>MENÚ</h5>
+                    </a>
+                    <a href="#recomendaciones">Recomendaciones</a>
+                    <br>
+                    <a href="menus/ensaladas.html">Ensaladas</a>
+                    <br>
+                    <a href="menus/bebida.html">Bebidas</a>
+                    <br>
+                    <a href="menus/aperitivos.html">Aperitivos</a>
+                    <br>
+                    <a href="menus/sopas.html">Sopas</a>
+                    <br>
+                    <a href="menus/postres.html">Postres</a>
+                </div>
+                <div class="col-md-2">
+                    <br>
+                    <a href="#servicios">
+                        <h5>SERVICIOS</h5>
+                    </a>
+                    <a href="#servicios">Cumpleaños</a>
+                    <br>
+                    <a href="#servicios">Aniversarios</a>
+                    <br>
+                    <a href="#servicios">Fiestas Infantiles</a>
+                    <br>
+                    <a href="#servicios">Declaraciones y Propuestas</a>
+                    <br>
+                    <a href="#servicios">Despedidas</a>
+                    <br>
+                    <a href="#servicios">Cena con Amigos</a>
+                </div>
+                <div class="col-md-2">
+                    <br>
+                    <a href="#contactos">
+                        <h5>CONTACTO</h5>
+                    </a>
+                </div>
             </div>
-            <div class="col-md-2">
-                <br>
-                <a href="#Nosotros"><h5>NOSOTROS</h5></a>
-                <a href="#Nosotros">Nuestra Historia</a>
-                <br>
-                <a href="#">Nuestra Propuesta</a>
+            <h3 style="color:white !important;">Ubicanos:</h3>
+            <div class="mapa_google col-xs-12 col-md-12">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.6369440149174!2d-73.26228768553409!3d10.450356967985908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab9ee192bb6cd%3A0x8f8dd8442d377c62!2s80%20%2329-2%20a%2029-130%2C%20Valledupar%2C%20Cesar!5e0!3m2!1ses!2sco!4v1631545868543!5m2!1ses!2sco"
+                    width="805" height="400" style="border:0;text-align: center;" allowfullscreen=""
+                    loading="lazy"></iframe>
             </div>
-            <div class="col-md-2">
-                <br>
-                <a href="#menu"><h5>MENÚ</h5></a>
-                <a href="#recomendaciones">Recomendaciones</a>
-                <br>
-                <a href="menus/ensaladas.html">Ensaladas</a>
-                <br>
-                <a href="menus/bebida.html">Bebidas</a>
-                <br>
-                <a href="menus/aperitivos.html">Aperitivos</a>
-                <br>
-                <a href="menus/sopas.html">Sopas</a>
-                <br>
-                <a href="menus/postres.html">Postres</a>
-            </div>
-            <div class="col-md-2">
-                <br>
-                <a href="#servicios"><h5>SERVICIOS</h5></a>
-                <a href="#servicios">Cumpleaños</a>
-                <br>
-                <a href="#servicios">Aniversarios</a>
-                <br>
-                <a href="#servicios">Fiestas Infantiles</a>
-                <br>
-                <a href="#servicios">Declaraciones y Propuestas</a>
-                <br>
-                <a href="#servicios">Despedidas</a>
-                <br>
-                <a href="#servicios">Cena con Amigos</a>
-            </div>
-            <div class="col-md-2">
-                <br>
-                <a href="#contactos"><h5>CONTACTO</h5></a>
-            </div>
-        </div>
-        <h3 style="color:white !important;">Ubicanos:</h3>
-        <div class="mapa_google col-xs-12 col-md-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.6369440149174!2d-73.26228768553409!3d10.450356967985908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab9ee192bb6cd%3A0x8f8dd8442d377c62!2s80%20%2329-2%20a%2029-130%2C%20Valledupar%2C%20Cesar!5e0!3m2!1ses!2sco!4v1631545868543!5m2!1ses!2sco" width="805" height="400" style="border:0;text-align: center;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
     </section>
 
 
@@ -857,7 +963,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6">
-                <h6 class="text-footer" style="color:white !important;">CONTACTO:</h6>
+                    <h6 class="text-footer" style="color:white !important;">CONTACTO:</h6>
                     <h6 class="text-muted" style="color:white !important;">
                         Direccion<br>
                         XXXXXXXXXXXXX<br>
@@ -871,15 +977,18 @@
                             <a href="#"><i class="fab fa-facebook"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
+                        </div>
                     </div>
-                    <div class="row"> <p class="text-muted small text-right" style="color:white !important;">XXXXXXXXXXXXXXXXX.<br> Todos los derechos reservados®</p></div>
-                </div>      
-            </div>  
+                    <div class="row">
+                        <p class="text-muted small text-right" style="color:white !important;">XXXXXXXXXXXXXXXXX.<br>
+                            Todos los derechos reservados®</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-<!--******FINAL MAPA****-->
+    <!--******FINAL MAPA****-->
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -900,7 +1009,8 @@
     <script type="text/javascript" src="js/carrito_de_compra.js"></script>
     <script type="text/javascript" src="js/cerrar_menu_carga.js"></script>
     <script type="text/javascript" src="js/menu_.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </body>
 

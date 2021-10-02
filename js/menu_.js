@@ -16,6 +16,7 @@ const aumentar_icon_carrito = (carrito) => {
     if(carrito != null){
         let num_ = 0
         if (carrito.length > 0){
+            console.log(carrito.length)
             for(i=0; i<count_productos_st.length; i++){
                 if(localStorage.getItem("cantidad_pedidos_"+i)==null)
                 {
@@ -28,6 +29,9 @@ const aumentar_icon_carrito = (carrito) => {
             }
             document.querySelector("#num_cart")
             .innerHTML = num_;
+            console.log(num_);
+        }else{
+            document.querySelector("#num_cart").classList.add("d-none")
         }
     }else{
         document.querySelector("#num_cart").classList.add("d-none")
@@ -489,13 +493,13 @@ const menu_ensaladas = (data) => {
         list_ensaladas += 
         `
         <div class='col'>
-            <div class='card h-100'>
-                <img src='${item.img}' alt='...' class='card-img-top '>
+            <div class='card h-100 card-radius'>
+                <img src='${item.img}' alt='...' class='card-img-top card-imf-radius'>
                     <div class='card-body'>
-                        <h5 class='card-title'>${item.titulo}</h5>
-                        <p class='card-text'>${item.descripcion}</p>
-                        <p class='card-text'>$ ${item.precio}</p>
-                        <button onclick="modal_data(${index},1)" class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
+                        <h5 class='card-titulo text-capitalize'>${item.titulo}</h5>
+                        <p class='card-texto'>${item.descripcion}</p>
+                        <p class='card-texto'>$ ${item.precio}</p>
+                        <button onclick="modal_data(${index},1)" class='card-titulo btn-general' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
                     </div>
                 </img>
             </div>
@@ -513,13 +517,13 @@ const menu_sopas  = (data)  => {
         list_sopas += 
         `
         <div class='col'>
-            <div class='card h-100'>
-                <img src='${item.img}' alt='...' class='card-img-top '>
+            <div class='card h-100 card-radius'>
+                <img src='${item.img}' alt='...' class='card-img-top card-imf-radius'>
                     <div class='card-body'>
-                        <h5 class='card-title'>${item.titulo}</h5>
+                        <h5 class='card-title text-capitalize'>${item.titulo}</h5>
                         <p class='card-text'>${item.descripcion}</p>
                         <p class='card-text'>${item.precio}</p>
-                        <button onclick="modal_data(${index},2)" class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
+                        <button onclick="modal_data(${index},2)" class='btn-general' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
                     </div>
                 </img>
             </div>
@@ -538,13 +542,13 @@ const menu_aperitivos = (data) => {
         list_aperitivos += 
         `
         <div class='col'>
-            <div class='card h-100'>
-                <img src=${item.img} alt='...' class='card-img-top '>
+            <div class='card h-100 card-radius'>
+                <img src=${item.img} alt='...' class='card-img-top card-imf-radius'>
                     <div class='card-body'>
-                        <h5 class='card-title'>${item.titulo}</h5>
+                        <h5 class='card-title text-capitalize'>${item.titulo}</h5>
                         <p class='card-text'>${item.descripcion}</p>
                         <p class='card-text'>${item.precio}</p>
-                        <button onclick="modal_data(${index},3)" class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
+                        <button onclick="modal_data(${index},3)" class='btn-general' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
                     </div>
                 </img>
             </div>
@@ -562,13 +566,13 @@ const menu_bebidas = (data) => {
         list_bebidas += 
         `
         <div class='col'>
-            <div class='card h-100'>
-                <img src=${item.img} alt='...' class='card-img-top '>
+            <div class='card h-100 card-radius'>
+                <img src=${item.img} alt='...' class='card-img-top card-imf-radius'>
                     <div class='card-body'>
-                        <h5 class='card-title'>${item.titulo}</h5>
+                        <h5 class='card-title text-capitalize'>${item.titulo}</h5>
                         <p class='card-text'>${item.descripcion}</p>
                         <p class='card-text'>${item.precio}</p>
-                        <button onclick="modal_data(${index},4)" class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
+                        <button onclick="modal_data(${index},4)" class='btn-general' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
                     </div>
                 </img>
             </div>
@@ -586,13 +590,13 @@ const menu_postres = (data) => {
         list_postres += 
         `
         <div class='col'>
-            <div class='card h-100'>
-                <img src=${item.img} alt='...' class='card-img-top '>
+            <div class='card h-100 card-radius'>
+                <img src=${item.img} alt='...' class='card-img-top card-imf-radius'>
                     <div class='card-body'>
-                        <h5 class='card-title'>${item.titulo}</h5>
+                        <h5 class='card-title text-capitalize'>${item.titulo}</h5>
                         <p class='card-text'>${item.descripcion}</p>
                         <p class='card-text'>$ ${item.precio}</p>
-                        <button onclick="modal_data(${index},5)" class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
+                        <button onclick="modal_data(${index},5)" class='btn-general' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
                     </div>
                 </img>
             </div>

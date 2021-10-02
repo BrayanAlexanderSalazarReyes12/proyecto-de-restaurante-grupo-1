@@ -1,7 +1,7 @@
 :root{
     --color-1: #467302;
     --color-2: #83A603;
-    --color-3: #F29F05;
+    --color-3: linear-gradient(90deg, rgba(176,124,28,1) 32%, rgba(220,145,5,1) 69%, rgba(220,145,5,1) 87%);;
     --color-4: #D95204;
     --color-5: #A61103;
     --fuente : 'Roboto', sans-serif;
@@ -129,8 +129,8 @@ div.serviciosof{
 .card-{
     border-radius: 15px 0px 15px 0px !important;
     border: 0px solid transparent !important;
-    box-shadow:  5px 5px 9px #dc9105,
-    -5px -5px 9px #ffad05 !important;
+    box-shadow:  5px 5px 10px #976b18,
+             -5px -5px 10px #c98d20;
 }
 .card__{
     border-radius: 15px 0px 15px 0px !important;

@@ -522,7 +522,7 @@ const menu_sopas  = (data)  => {
                     <div class='card-body'>
                         <h5 class='card-title text-capitalize'>${item.titulo}</h5>
                         <p class='card-text'>${item.descripcion}</p>
-                        <p class='card-text'>${item.precio}</p>
+                        <p class='card-text'>$ ${item.precio}</p>
                         <button onclick="modal_data(${index},2)" class='btn-general' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
                     </div>
                 </img>
@@ -547,7 +547,7 @@ const menu_aperitivos = (data) => {
                     <div class='card-body'>
                         <h5 class='card-title text-capitalize'>${item.titulo}</h5>
                         <p class='card-text'>${item.descripcion}</p>
-                        <p class='card-text'>${item.precio}</p>
+                        <p class='card-text'>$ ${item.precio}</p>
                         <button onclick="modal_data(${index},3)" class='btn-general' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
                     </div>
                 </img>
@@ -571,7 +571,7 @@ const menu_bebidas = (data) => {
                     <div class='card-body'>
                         <h5 class='card-title text-capitalize'>${item.titulo}</h5>
                         <p class='card-text'>${item.descripcion}</p>
-                        <p class='card-text'>${item.precio}</p>
+                        <p class='card-text'>$ ${item.precio}</p>
                         <button onclick="modal_data(${index},4)" class='btn-general' data-bs-toggle='modal' data-bs-target='#exampleModalProducto'>Mas informacion</button>
                     </div>
                 </img>

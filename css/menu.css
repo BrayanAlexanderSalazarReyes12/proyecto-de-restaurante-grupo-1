@@ -41,17 +41,21 @@ button{
 	border-radius: 0 45px 45px 0;
 }
 
+.modal-content{
+	border-radius: 15px 0 15px 0 !important;
+}
 
 .cantidad_producto{
 	width: 80px;
     height: 30px;
-    border: 1px solid black;
+    border: 2px solid var(--color-4) !important;
     align-items: center;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 5px;
 }
 
-.cantidad_producto i{
+.cantidad_producto i,small{
 	cursor: pointer;
+	color: var(--color-4);
 }

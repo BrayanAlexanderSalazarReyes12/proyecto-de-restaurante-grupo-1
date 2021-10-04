@@ -80,7 +80,7 @@ textarea.tipo-reserva{
     border: none;
     resize: none;
     text-align: center;
-    
+    font-family: var(--fuente);
 }
 
 

@@ -820,7 +820,6 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <h5 class="card-title">Cena con amigos</h5>
-
                                                     <button type="button"
                                                         style="background: rgb(37, 81, 175);color: white;"
                                                         class="btn btn-cena btn-ttc">Seleccionar</button>
@@ -843,13 +842,21 @@
                                 <input type="hidden" name="_autoresponse" value="Reserva Confirmada!!">
                                 <input type="hidden" name="_template" value="table">
 
+                                <!--Tipo de reserva-->
                                     <div class="mb-3">
                                     <div class=" tipo-reserva">
                                         <textarea class="tipo-reserva" name="Reserva" id="respuesta" cols="30"
-                                            rows="1" disabled></textarea>
+                                            rows="1"></textarea>
                                     </div>
                                 </div>
 
+                                <!--Fecha y Hora del evento-->
+                                <div class="mb-3 col-12 row-cols-md-3">
+                                    <input type="date" name="Fecha" min="2021-10-10" max="2021-12-31" step="1" required/>
+                                    <input type="time" name="Hora" min="10:00" max="22:00"  required/>
+                                </div>
+
+                                <!--Nombre-->
                                 <div class="mb-3">
                                     <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                                     <div class="col-sm-1-12 row-cols-md-1">
@@ -858,6 +865,7 @@
                                     </div>
                                 </div>
 
+                                <!--Email-->
                                 <div class="mb-3">
                                     <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                                     <div class="col-sm-1-12">
@@ -866,6 +874,7 @@
                                     </div>
                                 </div>
 
+                                <!--Telefono-->
                                 <div class="mb-3">
                                     <label for="inputName" class="col-sm-1-12 col-form-label"></label>
                                     <div class="col-sm-1-12">

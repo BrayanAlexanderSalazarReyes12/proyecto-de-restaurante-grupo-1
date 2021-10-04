@@ -11,10 +11,11 @@ let btndespedidas=document.querySelectorAll(".btn-despedidas")[0];
 let btncena=document.querySelectorAll(".btn-cena")[0];
 
 
-var respuesta;
+var respuesta="";
 
 
 abrir.addEventListener("click",function(e){
+    
     e.preventDefault();
     modalC.style.opacity="1";
     modalC.style.visibility="visible";
